@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\.metadata\.plugins\org.eclipse.jdt.core
+1002869115.index
+36482695.index
+1520825889.index

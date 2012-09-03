@@ -1,0 +1,227 @@
+17:01:48,612 TRACE [R] ContextManager starting, bundle version: 1.5.2.201204302029
+17:01:49,166 DEBUG [C] Property change listener is enabled.
+17:01:49,544 TRACE [R] ContextManager startingneed update: true
+17:01:49,552 DEBUG [U] Starting Search for CPs
+17:01:49,652 DEBUG [U] CP named BlackBerry Java SDK version 7.1.0 was found at C:\EclipseB\plugins\net.rim.ejde.componentpack7.1.0_7.1.0.10\components
+17:01:49,676 DEBUG [U] CP named BlackBerry Java SDK version 6.0.0 was found at C:\EclipseB\plugins\net.rim.ejde.componentpack6.0.0_6.0.0.43\components
+17:01:50,023 DEBUG [C] qualifier: 0
+17:01:51,121 DEBUG [K] VM: *ADDED* [1346684511106$C:\Program Files\Java\jre7]
+17:01:51,137 DEBUG [K] Event [org.eclipse.jdt.launching.PROPERTY_JAVADOC_LOCATION] for: *OLD* was[http://download.oracle.com/javase/7/docs/api/] *NEW* is [].
+17:01:51,641 TRACE [W] Attempting to create VM with name - BlackBerry JRE 7.1.0
+17:01:51,840 DEBUG [K] VM: *ADDED* [BlackBerry JRE 7.1.0$C:\EclipseB\plugins\net.rim.ejde.componentpack7.1.0_7.1.0.10\components]
+17:01:51,956 TRACE [C] openStartupOnEclpseFirstStart was changed from "false" to "false"
+17:01:52,420 TRACE [W] Attempting to create VM with name - BlackBerry JRE 6.0.0
+17:01:52,425 DEBUG [K] VM: *ADDED* [BlackBerry JRE 6.0.0$C:\EclipseB\plugins\net.rim.ejde.componentpack6.0.0_6.0.0.43\components]
+17:01:52,526 DEBUG [I] Bundle [net.rim.ejde] is changing state to Started.
+17:02:12,114 DEBUG [C] qualifier: 19
+17:03:10,164 DEBUG [C] Validating project ApuntesUFG
+17:03:10,829 ERROR [M] Resource '/ApuntesUFG/res' already exists.
+17:03:11,727 TRACE [R] loading C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\BlackBerry_App_Descriptor.xml
+17:03:12,573 TRACE [R] finished loading C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\BlackBerry_App_Descriptor.xml
+17:03:13,419 TRACE [e] ****** Get resource for ApuntesUFG
+17:03:13,462 TRACE [e] ****** Get resource for ApuntesUFG
+17:03:13,471 DEBUG [C] Validating project ApuntesUFG
+17:03:13,496 TRACE [e] ****** Get resource for ApuntesUFG
+17:03:13,727 TRACE [A] Entering PreprocessingBuilder build();kind=6
+17:03:13,745 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/ws/WsMovilSoap_Stub.java
+17:03:14,103 TRACE [A] File WsMovilSoap_Stub.java is marked as need to be built by java compiler.
+17:03:14,114 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/ws/WsMovilSoap.java
+17:03:14,116 TRACE [A] File WsMovilSoap.java is marked as need to be built by java compiler.
+17:03:14,117 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/ws/RecuperarAsignaturasInscritasResponse.java
+17:03:14,222 TRACE [A] File RecuperarAsignaturasInscritasResponse.java is marked as need to be built by java compiler.
+17:03:14,225 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/ws/RecuperarAsignaturasInscritas.java
+17:03:14,300 TRACE [A] File RecuperarAsignaturasInscritas.java is marked as need to be built by java compiler.
+17:03:14,301 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/ws/Evaluaciones.java
+17:03:14,336 TRACE [A] File Evaluaciones.java is marked as need to be built by java compiler.
+17:03:14,337 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/ws/AsignaturaInscrita.java
+17:03:14,351 TRACE [A] File AsignaturaInscrita.java is marked as need to be built by java compiler.
+17:03:14,352 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/ws/ArrayOfAsignaturaInscrita.java
+17:03:14,377 TRACE [A] File ArrayOfAsignaturaInscrita.java is marked as need to be built by java compiler.
+17:03:14,378 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/mypackage/notaMostrar.java
+17:03:14,383 TRACE [A] File notaMostrar.java is marked as need to be built by java compiler.
+17:03:14,385 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/mypackage/notaModificar.java
+17:03:14,401 TRACE [A] File notaModificar.java is marked as need to be built by java compiler.
+17:03:14,402 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/mypackage/notaLista.java
+17:03:14,428 TRACE [A] File notaLista.java is marked as need to be built by java compiler.
+17:03:14,430 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/mypackage/notaCrear.java
+17:03:14,431 TRACE [A] File notaCrear.java is marked as need to be built by java compiler.
+17:03:14,432 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/mypackage/materiaLista.java
+17:03:14,444 TRACE [A] File materiaLista.java is marked as need to be built by java compiler.
+17:03:14,446 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/mypackage/login.java
+17:03:14,454 TRACE [A] File login.java is marked as need to be built by java compiler.
+17:03:14,455 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/mypackage/MyScreen.java
+17:03:14,456 TRACE [A] File MyScreen.java is marked as need to be built by java compiler.
+17:03:14,458 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/mypackage/MyApp.java
+17:03:14,476 TRACE [A] File MyApp.java is marked as need to be built by java compiler.
+17:03:14,477 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/mypackage/Metodos.java
+17:03:14,488 TRACE [A] File Metodos.java is marked as need to be built by java compiler.
+17:03:14,489 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/mypackage/Config.java
+17:03:14,506 TRACE [A] File Config.java is marked as need to be built by java compiler.
+17:03:14,507 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/estilos/MyCustomButton.java
+17:03:14,521 TRACE [A] File MyCustomButton.java is marked as need to be built by java compiler.
+17:03:14,522 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/estilos/ListStyleButtonField.java
+17:03:14,560 TRACE [A] File ListStyleButtonField.java is marked as need to be built by java compiler.
+17:03:14,562 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/estilos/LikeMsnLabel.java
+17:03:14,583 TRACE [A] File LikeMsnLabel.java is marked as need to be built by java compiler.
+17:03:14,584 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/estilos/EmbossedButtonField.java
+17:03:14,609 TRACE [A] File EmbossedButtonField.java is marked as need to be built by java compiler.
+17:03:14,610 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/estilos/BitmapButtonField.java
+17:03:14,631 TRACE [A] File BitmapButtonField.java is marked as need to be built by java compiler.
+17:03:14,632 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/estilos/BaseButtonField.java
+17:03:14,635 TRACE [A] File BaseButtonField.java is marked as need to be built by java compiler.
+17:03:14,636 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/com/twmacinta/util/MD5State.java
+17:03:14,651 TRACE [A] File MD5State.java is marked as need to be built by java compiler.
+17:03:14,656 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/com/twmacinta/util/MD5.java
+17:03:14,675 TRACE [A] File MD5.java is marked as need to be built by java compiler.
+17:03:14,677 TRACE [A] Preprocessing file : C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/com/twmacinta/util/Autenticacion.java
+17:03:14,678 TRACE [A] File Autenticacion.java is marked as need to be built by java compiler.
+17:03:14,684 TRACE [A] Leaving PreprocessingBuilder build()
+17:03:14,708 TRACE [B] Entering ResourcesBuilder build();kind=6
+17:03:14,712 TRACE [B] Leaving ResourcesBuilder build()
+17:03:15,283 TRACE [e] ****** Get resource for ApuntesUFG
+17:03:15,288 DEBUG [C] Validating project ApuntesUFG
+17:03:15,310 TRACE [e] ****** Get resource for ApuntesUFG
+17:03:16,202 TRACE [A] Project ApuntesUFG is marked as need RAPC.
+17:03:16,347 DEBUG [R] RIA Initialization is started for C:/EclipseB/plugins/net.rim.ejde.componentpack6.0.0_6.0.0.43/components.....
+17:03:17,017 TRACE [e] ****** Get resource for ApuntesUFG
+17:03:18,066 DEBUG [R] RIA Initialization finished in : 0 ms
+17:03:18,307 DEBUG [W] SigningKey cache is populated for vm: BlackBerry JRE 6.0.0
+17:04:15,777 DEBUG [A] Checked : [ApuntesUFG]
+17:04:20,924 DEBUG [L] Packaging New_configuration
+17:04:21,097 TRACE [F] Execute rapc command: C:\EclipseB\plugins\net.rim.ejde.componentpack6.0.0_6.0.0.43\components\bin\rapc.exe -convertpng -quiet codename=deliverables\Standard\6.0.0\UFG_APP_1_2 -sourceroot=C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src;C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\res -import=C:\EclipseB\plugins\net.rim.ejde.componentpack6.0.0_6.0.0.43\components\lib\net_rim_api.jar C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar deliverables\Standard\6.0.0\UFG_APP_1_2.rapc C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\bin; Working Directory: C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG
+17:04:29,516 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\com\twmacinta\util\MD5.java at 461 about Warning!: method 'com.twmacinta.util.MD5.toBase64(byte[])' not invoked.
+17:04:29,517 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\com\twmacinta\util\MD5.java at 493 about Warning!: method 'com.twmacinta.util.MD5.fingerprint(byte[])' not invoked.
+17:04:29,518 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\com\twmacinta\util\MD5.java at 504 about Warning!: method 'com.twmacinta.util.MD5.equals(byte[],byte[])' not invoked.
+17:04:29,518 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\estilos\BitmapButtonField.java at 41 about Warning!: method 'estilos.BitmapButtonField.setImage(Bitmap)' not invoked.
+17:04:29,518 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\estilos\BitmapButtonField.java at 46 about Warning!: method 'estilos.BitmapButtonField.setFocusImage(Bitmap)' not invoked.
+17:04:29,519 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\estilos\EmbossedButtonField.java at 85 about Warning!: method 'estilos.EmbossedButtonField.setText(String)' not invoked.
+17:04:29,519 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\estilos\ListStyleButtonField.java at 78 about Warning!: method 'estilos.ListStyleButtonField.setDrawPosition(int)' not invoked.
+17:04:29,519 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\estilos\ListStyleButtonField.java at 127 about Warning!: method 'estilos.ListStyleButtonField.setText(String)' not invoked.
+17:04:29,519 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/ksoap2/SoapEnvelope.class):0: Warning!: method 'org.ksoap2.SoapEnvelope.setOutputSoapObject(Object)' not invoked.
+17:04:29,520 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/ksoap2/SoapFault.class):0: Warning!: method 'org.ksoap2.SoapFault.write(XmlSerializer)' not invoked.
+17:04:29,520 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/ksoap2/serialization/MarshalHashtable$ItemSoapObject.class):1: Warning!: inner class 'org.ksoap2.serialization.MarshalHashtable$ItemSoapObject' should be declared static
+17:04:29,520 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/ksoap2/serialization/PropertyInfo.class):0: Warning!: method 'org.ksoap2.serialization.PropertyInfo.clear()' not invoked.
+17:04:29,520 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/ksoap2/serialization/SoapSerializationEnvelope.class):0: Warning!: method 'org.ksoap2.serialization.SoapSerializationEnvelope.addTemplate(SoapObject)' not invoked.
+17:04:29,521 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/ksoap2/serialization/SoapSerializationEnvelope.class):0: Warning!: method 'org.ksoap2.serialization.SoapSerializationEnvelope.getResult()' not invoked.
+17:04:29,521 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/ksoap2/transport/Transport.class):0: Warning!: method 'org.ksoap2.transport.Transport.setUrl(String)' not invoked.
+17:04:29,521 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/ksoap2/transport/ServiceConnectionMidp.class):0: Warning!: method 'org.ksoap2.transport.ServiceConnectionMidp.connect()' not invoked.
+17:04:29,521 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/ksoap2/transport/ServiceConnectionMidp.class):0: Warning!: method 'org.ksoap2.transport.ServiceConnectionMidp.getErrorStream()' not invoked.
+17:04:29,521 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlParser.class):1: Warning!: member data 'Object location' not required in class: org.kxml2.io.KXmlParser
+17:04:29,522 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlParser.class):1: Warning!: member data 'String version' not required in class: org.kxml2.io.KXmlParser
+17:04:29,523 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlParser.class):1: Warning!: member data 'Boolean standalone' not required in class: org.kxml2.io.KXmlParser
+17:04:29,523 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlParser.class):1: Warning!: member data 'String encoding' not required in class: org.kxml2.io.KXmlParser
+17:04:29,523 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlParser.class):0: Warning!: method 'org.kxml2.io.KXmlParser.getFeature(String)' not invoked.
+17:04:29,523 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlParser.class):0: Warning!: method 'org.kxml2.io.KXmlParser.getInputEncoding()' not invoked.
+17:04:29,523 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlParser.class):0: Warning!: method 'org.kxml2.io.KXmlParser.defineEntityReplacementText(String,String)' not invoked.
+17:04:29,524 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlParser.class):0: Warning!: method 'org.kxml2.io.KXmlParser.getProperty(String)' not invoked.
+17:04:29,524 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlParser.class):0: Warning!: method 'org.kxml2.io.KXmlParser.isWhitespace()' not invoked.
+17:04:29,524 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlParser.class):0: Warning!: method 'org.kxml2.io.KXmlParser.getTextCharacters(int[])' not invoked.
+17:04:29,524 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlParser.class):0: Warning!: method 'org.kxml2.io.KXmlParser.getPrefix()' not invoked.
+17:04:29,524 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlParser.class):0: Warning!: method 'org.kxml2.io.KXmlParser.getAttributeType(int)' not invoked.
+17:04:29,524 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlParser.class):0: Warning!: method 'org.kxml2.io.KXmlParser.getAttributePrefix(int)' not invoked.
+17:04:29,525 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlParser.class):0: Warning!: method 'org.kxml2.io.KXmlParser.setProperty(String,Object)' not invoked.
+17:04:29,525 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlParser.class):0: Warning!: method 'org.kxml2.io.KXmlParser.skipSubTree()' not invoked.
+17:04:29,525 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlSerializer.class):1: Warning!: member data 'String encoding' not required in class: org.kxml2.io.KXmlSerializer
+17:04:29,525 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlSerializer.class):0: Warning!: method 'org.kxml2.io.KXmlSerializer.endDocument()' not invoked.
+17:04:29,525 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlSerializer.class):0: Warning!: method 'org.kxml2.io.KXmlSerializer.getFeature(String)' not invoked.
+17:04:29,526 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlSerializer.class):0: Warning!: method 'org.kxml2.io.KXmlSerializer.getProperty(String)' not invoked.
+17:04:29,526 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlSerializer.class):0: Warning!: method 'org.kxml2.io.KXmlSerializer.setFeature(String,boolean)' not invoked.
+17:04:29,526 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlSerializer.class):0: Warning!: method 'org.kxml2.io.KXmlSerializer.setProperty(String,Object)' not invoked.
+17:04:29,526 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlSerializer.class):0: Warning!: method 'org.kxml2.io.KXmlSerializer.startDocument(String,Boolean)' not invoked.
+17:04:29,526 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlSerializer.class):0: Warning!: method 'org.kxml2.io.KXmlSerializer.getName()' not invoked.
+17:04:29,527 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/io/KXmlSerializer.class):0: Warning!: method 'org.kxml2.io.KXmlSerializer.text(char[],int,int)' not invoked.
+17:04:29,527 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/kdom/Node.class):0: Warning!: method 'org.kxml2.kdom.Node.getElement(String,String)' not invoked.
+17:04:29,527 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/kdom/Node.class):0: Warning!: method 'org.kxml2.kdom.Node.getText(int)' not invoked.
+17:04:29,527 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/kdom/Node.class):0: Warning!: method 'org.kxml2.kdom.Node.indexOf(String,String,int)' not invoked.
+17:04:29,527 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/kdom/Node.class):0: Warning!: method 'org.kxml2.kdom.Node.isText(int)' not invoked.
+17:04:29,527 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/kdom/Node.class):0: Warning!: method 'org.kxml2.kdom.Node.removeChild(int)' not invoked.
+17:04:29,528 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/kdom/Element.class):0: Warning!: method 'org.kxml2.kdom.Element.clear()' not invoked.
+17:04:29,528 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/kdom/Element.class):0: Warning!: method 'org.kxml2.kdom.Element.getAttributeValue(String,String)' not invoked.
+17:04:29,528 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/kdom/Element.class):0: Warning!: method 'org.kxml2.kdom.Element.getRoot()' not invoked.
+17:04:29,528 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/kdom/Element.class):0: Warning!: method 'org.kxml2.kdom.Element.getNamespaceUri(String)' not invoked.
+17:04:29,528 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/kdom/Element.class):0: Warning!: method 'org.kxml2.kdom.Element.getNamespaceCount()' not invoked.
+17:04:29,529 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/kdom/Element.class):0: Warning!: method 'org.kxml2.kdom.Element.getParent()' not invoked.
+17:04:29,529 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/kdom/Element.class):0: Warning!: method 'org.kxml2.kdom.Element.setName(String)' not invoked.
+17:04:29,529 TRACE [F] reporting problem null at 0 about C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\lib\ksoap2-j2me-core-prev-2.1.2.jar(org/kxml2/kdom/Element.class):0: Warning!: method 'org.kxml2.kdom.Element.setNamespace(String)' not invoked.
+17:04:29,529 TRACE [F] reporting problem XmlPullParserException.java at 48 about Warning!: method 'org.xmlpull.v1.XmlPullParserException.getDetail()' not invoked.
+17:04:29,529 TRACE [F] reporting problem XmlPullParserException.java at 50 about Warning!: method 'org.xmlpull.v1.XmlPullParserException.getLineNumber()' not invoked.
+17:04:29,529 TRACE [F] reporting problem XmlPullParserException.java at 51 about Warning!: method 'org.xmlpull.v1.XmlPullParserException.getColumnNumber()' not invoked.
+17:04:29,529 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\ws\AsignaturaInscrita.java at 25 about Warning!: method 'ws.AsignaturaInscrita.getIdAsignatura()' not invoked.
+17:04:29,530 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\ws\AsignaturaInscrita.java at 41 about Warning!: method 'ws.AsignaturaInscrita.getGrupo()' not invoked.
+17:04:29,530 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\ws\AsignaturaInscrita.java at 49 about Warning!: method 'ws.AsignaturaInscrita.getEvaluaciones()' not invoked.
+17:04:29,530 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\ws\Evaluaciones.java at 39 about Warning!: method 'ws.Evaluaciones.getLaboratorio1()' not invoked.
+17:04:29,530 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\ws\Evaluaciones.java at 47 about Warning!: method 'ws.Evaluaciones.getLaboratorio2()' not invoked.
+17:04:29,531 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\ws\Evaluaciones.java at 55 about Warning!: method 'ws.Evaluaciones.getLaboratorio3()' not invoked.
+17:04:29,531 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\ws\Evaluaciones.java at 63 about Warning!: method 'ws.Evaluaciones.getLaboratorio4()' not invoked.
+17:04:29,531 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\ws\Evaluaciones.java at 71 about Warning!: method 'ws.Evaluaciones.getPromedioLaboratorios()' not invoked.
+17:04:29,532 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\ws\Evaluaciones.java at 79 about Warning!: method 'ws.Evaluaciones.getPruebaObjetiva1()' not invoked.
+17:04:29,533 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\ws\Evaluaciones.java at 87 about Warning!: method 'ws.Evaluaciones.getPruebaObjetiva2()' not invoked.
+17:04:29,533 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\ws\Evaluaciones.java at 95 about Warning!: method 'ws.Evaluaciones.getPruebaObjetiva3()' not invoked.
+17:04:29,533 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\ws\Evaluaciones.java at 103 about Warning!: method 'ws.Evaluaciones.getPruebaObjetiva4()' not invoked.
+17:04:29,533 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\ws\Evaluaciones.java at 111 about Warning!: method 'ws.Evaluaciones.getPromedioPruebasObjetivas()' not invoked.
+17:04:29,534 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\ws\Evaluaciones.java at 119 about Warning!: method 'ws.Evaluaciones.getNotaFinal()' not invoked.
+17:04:29,534 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\ws\RecuperarAsignaturasInscritas.java at 21 about Warning!: method 'ws.RecuperarAsignaturasInscritas.getCarnet()' not invoked.
+17:04:29,534 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\ws\RecuperarAsignaturasInscritas.java at 25 about Warning!: method 'ws.RecuperarAsignaturasInscritas.setCarnet(String)' not invoked.
+17:04:29,534 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\ws\RecuperarAsignaturasInscritas.java at 29 about Warning!: method 'ws.RecuperarAsignaturasInscritas.getCode()' not invoked.
+17:04:29,535 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\ws\RecuperarAsignaturasInscritas.java at 33 about Warning!: method 'ws.RecuperarAsignaturasInscritas.setCode(String)' not invoked.
+17:04:29,535 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\ws\RecuperarAsignaturasInscritasResponse.java at 19 about Warning!: method 'ws.RecuperarAsignaturasInscritasResponse.getRecuperarAsignaturasInscritasResult()' not invoked.
+17:04:29,535 TRACE [F] reporting problem C:\Users\Ghost\Documents\GitHub\Proyecto_BB_SQLite\ApuntesUFG\src\ws\RecuperarAsignaturasInscritasResponse.java at 23 about Warning!: method 'ws.RecuperarAsignaturasInscritasResponse.setRecuperarAsignaturasInscritasResult(ArrayOfAsignaturaInscrita)' not invoked.
+17:04:29,573 TRACE [A] Project ApuntesUFG is marked as not need RAPC.
+17:04:29,578 DEBUG [C] Validating project ApuntesUFG
+17:04:29,595 TRACE [e] ****** Get resource for ApuntesUFG
+17:04:29,608 TRACE [M] Project ApuntesUFG undeploy from C:\EclipseB\plugins\net.rim.ejde.componentpack6.0.0_6.0.0.43\components\simulator
+17:04:29,608 TRACE [M] Erase UFG_APP_1_2.cod
+17:04:29,609 TRACE [M] Erase UFG_APP_1_2.jar
+17:04:29,610 TRACE [M] Erase UFG_APP_1_2.debug
+17:04:29,611 TRACE [M] Erase UFG_APP_1_2-1.debug
+17:04:29,611 TRACE [M] Erase UFG_APP_1_2-2.debug
+17:04:29,611 TRACE [M] Erase UFG_APP_1_2-3.debug
+17:04:29,612 TRACE [M] Erase UFG_APP_1_2-4.debug
+17:04:29,612 TRACE [M] Erase UFG_APP_1_2-5.debug
+17:04:29,613 TRACE [M] Erase UFG_APP_1_2-6.debug
+17:04:29,613 TRACE [M] Erase UFG_APP_1_2.cso
+17:04:29,614 TRACE [M] Erase UFG_APP_1_2.csl
+17:04:29,614 TRACE [M] Project ApuntesUFG deploy --> C:\EclipseB\plugins\net.rim.ejde.componentpack6.0.0_6.0.0.43\components\simulator
+17:04:29,615 TRACE [M] Copy UFG_APP_1_2.cod
+17:04:29,618 TRACE [M] Copy UFG_APP_1_2.jar
+17:04:29,623 TRACE [M] Copy UFG_APP_1_2.debug
+17:04:29,625 TRACE [M] Copy UFG_APP_1_2-1.debug
+17:04:29,626 TRACE [M] Copy UFG_APP_1_2-2.debug
+17:04:29,628 TRACE [M] Copy UFG_APP_1_2-3.debug
+17:04:29,630 TRACE [M] Copy UFG_APP_1_2-4.debug
+17:04:29,705 TRACE [A] Entering PreprocessingBuilder build();kind=9
+17:04:29,718 TRACE [A] Leaving PreprocessingBuilder build()
+17:04:29,719 TRACE [B] Entering ResourcesBuilder build();kind=9
+17:04:29,721 TRACE [B] Leaving ResourcesBuilder build()
+17:04:29,731 TRACE [M] Copy UFG_APP_1_2-5.debug
+17:04:29,735 TRACE [M] Copy UFG_APP_1_2-6.debug
+17:04:29,738 TRACE [M] Copy UFG_APP_1_2.cso
+17:04:29,743 TRACE [M] Copy UFG_APP_1_2.csl
+17:04:29,747 TRACE [M] Project ApuntesUFG undeploy from C:\Program Files\Research In Motion\BlackBerry Smartphone Simulators 6.0.0\6.0.0.723 (9300)
+17:04:29,748 TRACE [M] Erase UFG_APP_1_2.cod
+17:04:29,749 TRACE [M] Erase UFG_APP_1_2.jar
+17:04:29,750 TRACE [M] Erase UFG_APP_1_2.debug
+17:04:29,751 TRACE [M] Erase UFG_APP_1_2-1.debug
+17:04:29,753 TRACE [M] Erase UFG_APP_1_2-2.debug
+17:04:29,754 TRACE [M] Erase UFG_APP_1_2-3.debug
+17:04:29,755 TRACE [M] Erase UFG_APP_1_2-4.debug
+17:04:29,760 TRACE [M] Erase UFG_APP_1_2-5.debug
+17:04:29,761 TRACE [M] Erase UFG_APP_1_2-6.debug
+17:04:29,762 TRACE [M] Erase UFG_APP_1_2.cso
+17:04:29,763 TRACE [M] Erase UFG_APP_1_2.csl
+17:04:29,764 TRACE [M] Project ApuntesUFG deploy --> C:\Program Files\Research In Motion\BlackBerry Smartphone Simulators 6.0.0\6.0.0.723 (9300)
+17:04:29,764 TRACE [M] Copy UFG_APP_1_2.cod
+17:04:29,769 TRACE [M] Copy UFG_APP_1_2.jar
+17:04:29,779 TRACE [M] Copy UFG_APP_1_2.debug
+17:04:29,781 TRACE [M] Copy UFG_APP_1_2-1.debug
+17:04:29,783 TRACE [M] Copy UFG_APP_1_2-2.debug
+17:04:29,785 TRACE [M] Copy UFG_APP_1_2-3.debug
+17:04:29,810 TRACE [M] Copy UFG_APP_1_2-4.debug
+17:04:29,812 TRACE [M] Copy UFG_APP_1_2-5.debug
+17:04:29,814 TRACE [M] Copy UFG_APP_1_2-6.debug
+17:04:29,818 TRACE [M] Copy UFG_APP_1_2.cso
+17:04:29,820 TRACE [M] Copy UFG_APP_1_2.csl
+17:04:29,934 INFO  [L] Simulator launch command:"C:\Program Files\Research In Motion\BlackBerry Smartphone Simulators 6.0.0\6.0.0.723 (9300)\fledge.exe" /handheld=9300 /app-param=JvmAlxConfigFile:9300.xml /pin=0x2100000A /data-port=0x4d44 /data-port=0x4d4e /session=9300 /app="C:\Program Files\Research In Motion\BlackBerry Smartphone Simulators 6.0.0\6.0.0.723 (9300)\Jvm.dll" /app-param=DisableRegistration
+17:04:29,934 INFO  [L] Working directory:C:\Program Files\Research In Motion\BlackBerry Smartphone Simulators 6.0.0\6.0.0.723 (9300)
+17:04:29,935 INFO  [L] Launch MDS-CS:false
+17:04:29,935 INFO  [L] MDS-CS directory:C:\EclipseB\plugins\net.rim.ejde.componentpack6.0.0_6.0.0.43\components\MDS
