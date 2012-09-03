@@ -2,7 +2,7 @@ package mypackage;
 
 
 public class Config {
-	private String version = "0.0.2.4.sqlite";
+	private String version = "0.0.3.5.sqlite";
 	private String path;
 	private String Createmateria;
 	private String Createapunte;

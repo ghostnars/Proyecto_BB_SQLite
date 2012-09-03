@@ -12,8 +12,10 @@ import net.rim.device.api.ui.Field;
 import net.rim.device.api.ui.FieldChangeListener;
 import net.rim.device.api.ui.TransitionContext;
 import net.rim.device.api.ui.Ui;
+import net.rim.device.api.ui.UiApplication;
 import net.rim.device.api.ui.UiEngineInstance;
 import net.rim.device.api.ui.XYEdges;
+import net.rim.device.api.ui.component.Dialog;
 import net.rim.device.api.ui.component.RichTextField;
 import net.rim.device.api.ui.container.HorizontalFieldManager;
 import net.rim.device.api.ui.decor.BackgroundFactory;
@@ -28,22 +30,26 @@ BitmapButtonField bts1 , bts2 , bts3 , bts4,bts5,boton;
 		BitmapButtonField materia1,materia2,materia3,materia4,materia5,materia6,materia7;
 		BitmapButtonField[] materias={materia1,materia2,materia3,materia4,materia5,materia6};
 		Config path = new Config();
-		Config selectmateria = new Config();
+		Config statement = new Config();
     public materiaLista()
     {   
     	getMainManager().setBackground(BackgroundFactory.createLinearGradientBackground(Color.BLACK, Color.BLACK,Color.BLACK,Color.BLACK));
  		
     	 setTitle("Lista de materias");
-        try{
+    	 
+    	 
+        	
+        	try{
         	URI uri = URI.create(path.Path());
         	Database sqliteDB = DatabaseFactory.open(uri);
 
-                Statement se = sqliteDB.createStatement(selectmateria.SelectMateria());
+                Statement se = sqliteDB.createStatement(statement.SelectMateria());
                 
                 se.prepare();
                 Cursor c = se.getCursor();
                 
                 Row r;
+                
                 int i = 0;
                 while(c.next()) 
                 {
@@ -70,15 +76,31 @@ BitmapButtonField bts1 , bts2 , bts3 , bts4,bts5,boton;
         			elementolista.setMargin(2, 5, 2, 5);
         			add(elementolista);
                     i++;
+                   
                     
-                    
-                }
-                if (i==0)
-                {
-                    add(new RichTextField("There are no tables in the MyTestDatabase database."));
                 }
                 se.close();
                 sqliteDB.close();
+                if (i==0)
+                {
+                	UiApplication.getUiApplication().invokeLater(new Runnable(){
+                			public void run(){
+
+                				Object[] choices = new Object[] {"Cargar Materias"};
+                				int result = Dialog.ask("¿Primera vez? :D", choices, 0);
+
+                				switch (result) {
+                				case 0:
+                					openScreen(new login());
+                				
+                				}				
+                			}});
+                	
+                	//WLabelField texte = new WLabelField("no hay nada");
+                	//add(texte);
+                	
+                }
+                
                 
       
 
