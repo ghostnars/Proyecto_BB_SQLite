@@ -12,21 +12,20 @@ public class MyApp extends UiApplication
      * Entry point for application
      * @param args Command line arguments (not used)
      */ 
+
     public static void main(String[] args)
     {
         // Create a new instance of the application and make the currently
         // running thread the application's event dispatch thread.
         MyApp theApp = new MyApp();       
-        theApp.enterEventDispatcher();
+        theApp.enterEventDispatcher(); 
     }
-    
-
     /**
      * Creates a new MyApp object
      */
     public MyApp()
-    {        
+    {                	
+         pushScreen(new login());
         // Push a screen onto the UI stack for rendering.
-        pushScreen(new login());
     }    
 }

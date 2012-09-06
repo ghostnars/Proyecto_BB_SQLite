@@ -1,0 +1,266 @@
+package mypackage;
+
+import net.rim.device.api.database.Cursor;
+import net.rim.device.api.database.Database;
+import net.rim.device.api.database.DatabaseFactory;
+import net.rim.device.api.database.Row;
+import net.rim.device.api.database.Statement;
+import net.rim.device.api.i18n.SimpleDateFormat;
+import net.rim.device.api.io.URI;
+import net.rim.device.api.system.Bitmap;
+import net.rim.device.api.ui.Field;
+import net.rim.device.api.ui.FieldChangeListener;
+import net.rim.device.api.ui.MenuItem;
+import net.rim.device.api.ui.TransitionContext;
+import net.rim.device.api.ui.Ui;
+import net.rim.device.api.ui.UiEngineInstance;
+import net.rim.device.api.ui.component.BasicEditField;
+import net.rim.device.api.ui.component.DateField;
+import net.rim.device.api.ui.component.Dialog;
+import net.rim.device.api.ui.component.EditField;
+import net.rim.device.api.ui.component.LabelField;
+import net.rim.device.api.ui.component.ObjectChoiceField;
+import net.rim.device.api.ui.container.VerticalFieldManager;
+import net.rim.device.api.ui.decor.BackgroundFactory;
+import estilos.Metodos;
+
+
+public class notaModificar extends Metodos implements FieldChangeListener {
+	BasicEditField nota;
+	EditField efTitulo,efNota;	
+	Config path = new Config();
+	Config selectmateria = new Config();
+	Config selectapunte = new Config();
+	String idApunte;
+	int idMateria;
+	String titulos;
+	String apuntes;
+	String date;
+	DateField fecha;
+	ObjectChoiceField ocfPrioridad;
+	LabelField materia;
+	LabelField lblfecha;
+	String choices[] = {"Alta","Media","Baja"};
+	Config statement = new Config();
+    public notaModificar(int id_materia,String id_apunte)
+    {   
+    	Bitmap bitmapfondo = Bitmap.getBitmapResource("notepad4.png");
+		getMainManager().setBackground(BackgroundFactory.createBitmapBackground(bitmapfondo));
+
+		
+    	idMateria = id_materia;
+    	idApunte = id_apunte;
+    	
+    	
+		VerticalFieldManager allContent = new VerticalFieldManager(VerticalFieldManager.USE_ALL_WIDTH);
+		
+		//allContent.setBorder(BorderFactory.createBitmapBorder(new XYEdges(10,10,8,10), bitmapfondo));
+       
+    	
+    	
+    	
+    	  int iSetTo = 2;
+          ocfPrioridad = new ObjectChoiceField("Prioridad: ", choices, iSetTo);
+          //allContent.add(ocfPrioridad);
+          setTitle(ocfPrioridad);
+    	
+    	try{
+        	URI uri = URI.create(path.Path());
+        	Database sqliteDB = DatabaseFactory.open(uri);
+            Statement se = sqliteDB.createStatement(selectmateria.SelectNomMateria()+idMateria+"");
+            se.prepare();
+            Cursor c = se.getCursor();
+            Row r;
+            int i = 0;
+            
+            while(c.next()){
+                r = c.getRow();
+                materia = new LabelField(r.getString(0)) ;
+                materia.setMargin(0, 0, 0, 25);
+                allContent.add(materia);
+               
+                
+            }
+            
+            se.close();
+            sqliteDB.close();
+    	  }catch (Exception e){
+              Dialog.alert(e.getMessage().toString());
+              e.printStackTrace();
+              } 
+    	
+
+    	
+		
+        try{
+        	URI uri1 = URI.create(path.Path());
+        	Database sqliteDB1 = DatabaseFactory.open(uri1);
+        	Statement se1 = sqliteDB1.createStatement(selectapunte.SelectApunte()+idMateria+" AND id_apunte="+idApunte+"");
+            se1.prepare();
+            Cursor c1 = se1.getCursor();
+            Row r1;
+             
+            
+            while(c1.next()){
+                r1 = c1.getRow();
+                
+               titulos 		= r1.getString(0).toUpperCase();
+               apuntes 		= r1.getString(1);
+               date			= r1.getString(3);
+                
+            }
+            
+            se1.close();
+            sqliteDB1.close();
+            
+            
+            VerticalFieldManager contentTitulo = new VerticalFieldManager(VerticalFieldManager.FIELD_HCENTER);
+            contentTitulo.setMargin(9,0,0,25);
+            
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+            
+            fecha = new DateField("", System.currentTimeMillis(), dateFormat, Field.FIELD_LEFT);
+            lblfecha = new LabelField(date);
+            lblfecha.setMargin(6,0,0,25);
+            allContent.add(lblfecha);
+            
+    	    efTitulo = new EditField("", titulos, 32, EditField.FILTER_FILENAME){
+            	public int getPreferredHeight(){
+                    return 30;
+                }
+
+                public int getPreferredWidth(){
+                    return 310;
+                }
+
+                public void layout(int width, int height){
+                	setExtent(getPreferredWidth(), getPreferredHeight());
+                    super.layout(getPreferredWidth(), getPreferredHeight());
+                }
+            };
+
+            contentTitulo.add(efTitulo);
+            allContent.add(contentTitulo);
+            
+            
+            VerticalFieldManager contentNota = new VerticalFieldManager(VerticalFieldManager.FIELD_HCENTER);
+            contentNota.setMargin(24,0,0,22);
+            //EDITFIELD TITULO  
+
+    	    efNota = new EditField("", apuntes, 500, EditField.FILTER_DEFAULT){
+            	public int getPreferredHeight(){
+                    return 120;
+                }
+
+                public int getPreferredWidth(){
+                    return 300;
+                }
+
+                public void layout(int width, int height){
+                	setExtent(getPreferredWidth(), getPreferredHeight());
+                    super.layout(getPreferredWidth(), getPreferredHeight());
+                }
+            };
+           
+            contentNota.add(efNota);
+            allContent.add(contentNota);
+            add(allContent);
+   
+        }catch (Exception e){
+            Dialog.alert(e.getMessage().toString());
+            e.printStackTrace();
+            } 
+        
+        
+        
+        
+        
+        
+      
+	
+	MenuItem miGuardar = new MenuItem("Modificar" , 100, 10){
+	    public void run(){
+	    	  String textoTitulo = efTitulo.getText().toLowerCase();
+	          String textoApunte = efNota.getText();
+	          String textoPrioridad = (String) ocfPrioridad.getChoice(ocfPrioridad.getSelectedIndex()); 
+	          
+	          if(textoTitulo.length()==0){
+        		  Dialog.alert("Ingrese un titulo para el apunte"); 
+        	  }else{
+		          try
+		          {         
+		              // Update the record in the DirectoryItems table for the given id
+		        	  URI uri1 = URI.create(path.Path());
+		          	  Database sqliteDB1 = DatabaseFactory.open(uri1);
+		              Statement statement = sqliteDB1.createStatement("UPDATE APUNTE SET titulo = ?, apunte = ?, prioridad = ?, fecha = ?  WHERE id_materia = ? AND id_apunte = ?"); 
+		              statement.prepare();                
+		              statement.bind(1, textoTitulo);
+		              statement.bind(2, textoApunte);
+		              statement.bind(3, textoPrioridad);
+		              statement.bind(4, fecha.toString());
+		              statement.bind(5, idMateria);
+		              statement.bind(6, idApunte);
+		              
+		              statement.execute();                                           
+		              statement.close();
+		              sqliteDB1.close();   
+		              Dialog.alert("Guardado con exito");
+		              
+        	  }catch (Exception e){
+                Dialog.alert(e.getMessage().toString());
+                e.printStackTrace();
+                }  
+    	      }    
+    	    }
+    	};
+        
+    	
+    	MenuItem menuEliminar = new MenuItem("Eliminar Apunte" , 100, 10){
+    	    public void eliminar(){
+    	    	String eliminar = idApunte;
+    	      Dialog.alert(eliminar+"");
+    	    	/**
+    	    	 try{
+    	    		 
+    	    		 
+    		         	URI uri1 = URI.create(path.Path());
+    		         	Database sqliteDB1 = DatabaseFactory.open(uri1);
+    		         	Statement st = sqliteDB1.createStatement("DELETE FROM APUNTE WHERE id_apunte = "+eliminar);
+    		            st.prepare();
+    		            st.execute();
+    		            st.close();
+    		            sqliteDB1.close();
+    		         }catch (Exception e){
+    		         Dialog.alert("error eliminar "+e.getMessage().toString());
+    		         e.printStackTrace();
+    		         }*/
+    	         }
+    	};
+    	
+    	addMenuItem(miGuardar);
+		addMenuItem(menuEliminar);
+
+
+    	
+    }
+	public void fieldChanged(Field field, int context) {
+		// TODO Auto-generated method stub
+		
+	
+		
+	}
+	public boolean onClose() {
+		//force the app to quit
+		 TransitionContext transition = new TransitionContext(TransitionContext.TRANSITION_SLIDE);
+	        transition.setIntAttribute(TransitionContext.ATTR_DURATION, 500);
+	        transition.setIntAttribute(TransitionContext.ATTR_DIRECTION, TransitionContext.DIRECTION_RIGHT);
+	        transition.setIntAttribute(TransitionContext.ATTR_STYLE, TransitionContext.STYLE_PUSH);
+	        
+	        UiEngineInstance engine = Ui.getUiEngineInstance();
+	        engine.setTransition(this, null, UiEngineInstance.TRIGGER_PUSH, transition);
+		
+		openScreen(new notaLista(idMateria));
+		return true;
+	}
+
+}

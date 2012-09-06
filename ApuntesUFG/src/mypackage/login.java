@@ -29,6 +29,7 @@ import net.rim.device.api.ui.decor.BorderFactory;
 import com.twmacinta.util.Autenticacion;
 
 import estilos.BitmapButtonField;
+import estilos.Metodos;
 
 public class login extends Metodos implements FieldChangeListener {
 		BitmapButtonField boton;
@@ -48,7 +49,7 @@ public class login extends Metodos implements FieldChangeListener {
 		String userufg = "";
 		String pwdufg  = "";
     	Autenticacion verificar = new Autenticacion();
-    	Config ver = new Config();
+    	Config path = new Config();
 		Config statement = new Config();
 		
 	public  login (){
@@ -208,7 +209,7 @@ public class login extends Metodos implements FieldChangeListener {
             		try{ 
             			
             			
-            			URI uri = URI.create(ver.Path());
+            			URI uri = URI.create(path.Path());
             			Database sqliteDB = DatabaseFactory.create(uri);
             			
             			Statement st = sqliteDB.createStatement(statement.CreateMateria());
@@ -220,7 +221,6 @@ public class login extends Metodos implements FieldChangeListener {
             			ct.prepare();
             			ct.execute();
             			ct.close();
-
             			
             			carnet = _login;
             		    code   =_password; 
@@ -232,9 +232,10 @@ public class login extends Metodos implements FieldChangeListener {
             			
             			token = verificar.validar(userufg, pwdufg);
             			
-            				for(int i=0;i<=result.getAsignaturaInscrita().length ;i++){				
+            				for(int i=0;i<=result.getAsignaturaInscrita().length ;i++){	
+            					String devolucion = result.getAsignaturaInscrita()[i].getNombreAsignatura();
             					//CREA EL STATEMENT PARA GUARDAR POR CADA REPETICION
-            					Statement st1 = sqliteDB.createStatement("INSERT INTO MATERIA(nombre_materia)values('"+ result.getAsignaturaInscrita()[i].getNombreAsignatura() +"')");
+            					Statement st1 = sqliteDB.createStatement(statement+"('"+ devolucion +"')");
             					st1.prepare();
             					st1.execute();
             					st1.close();

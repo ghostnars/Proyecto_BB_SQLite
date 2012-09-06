@@ -1,0 +1,89 @@
+package mypackage;
+
+import net.rim.device.api.database.Cursor;
+import net.rim.device.api.database.Database;
+import net.rim.device.api.database.DatabaseFactory;
+import net.rim.device.api.database.Row;
+import net.rim.device.api.database.Statement;
+import net.rim.device.api.io.URI;
+import net.rim.device.api.ui.Field;
+import net.rim.device.api.ui.FieldChangeListener;
+import net.rim.device.api.ui.component.Dialog;
+import net.rim.device.api.ui.component.LabelField;
+
+/**
+ * A class extending the MainScreen class, which provides default standard
+ * behavior for BlackBerry GUI applications.
+ */
+public final class MyScreen extends Metodos implements FieldChangeListener
+{
+    /**
+     * Creates a new MyScreen object
+     */
+	Config ver = new Config();
+	Config statement = new Config();
+    public MyScreen()
+    {        
+    
+        setTitle("Cargado de materias");
+
+		try{ 
+			
+			
+			        URI uri = URI.create(ver.Path());
+			Database sqliteDB = DatabaseFactory.create(uri);
+			
+			Statement st = sqliteDB.createStatement(statement.CreateMateria());
+			st.prepare();
+			st.execute();
+			st.close();
+			
+			Statement ct = sqliteDB.createStatement(statement.CreateApunte());
+			ct.prepare();
+			ct.execute();
+			ct.close();
+		}catch(Exception e ){
+			LabelField textq = new LabelField("error"+e.getMessage().toString());
+		    add(textq);
+	       // e.printStackTrace();
+		}finally{
+			LabelField texta = new LabelField("entro al finally");
+		    add(texta);
+		}  
+    
+		
+   	 try{
+         URI uri1 = URI.create(ver.Path());
+      	Database sqliteDB1 = DatabaseFactory.open(uri1);
+          Statement se1 = sqliteDB1.createStatement("SELECT nombre_materia FROM MATERIA WHERE id_materia = 1");
+          se1.prepare();
+          Cursor c1 = se1.getCursor();
+          Row r1;
+         
+          int i = 0;
+          while(c1.next()){
+              r1 = c1.getRow();
+              
+            LabelField textA = new LabelField(r1.getString(0));
+  		    add(textA);
+          }
+          
+          se1.close();
+          sqliteDB1.close();
+          i++;
+ 	   }catch (Exception e){
+ 		  LabelField textAs = new LabelField("error al hacer el select");
+		    add(textAs);
+ 	         } 
+    
+    }
+
+    public void llamar(){
+    	openScreen(new materiaLista());
+    	
+    }
+	public void fieldChanged(Field field, int context) {
+		// TODO Auto-generated method stub
+		
+	}
+}

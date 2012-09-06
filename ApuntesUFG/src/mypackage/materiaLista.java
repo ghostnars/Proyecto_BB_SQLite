@@ -7,20 +7,16 @@ import net.rim.device.api.database.Row;
 import net.rim.device.api.database.Statement;
 import net.rim.device.api.io.URI;
 import net.rim.device.api.system.Bitmap;
-import net.rim.device.api.ui.Color;
 import net.rim.device.api.ui.Field;
 import net.rim.device.api.ui.FieldChangeListener;
 import net.rim.device.api.ui.TransitionContext;
 import net.rim.device.api.ui.Ui;
-import net.rim.device.api.ui.UiApplication;
 import net.rim.device.api.ui.UiEngineInstance;
-import net.rim.device.api.ui.XYEdges;
-import net.rim.device.api.ui.component.Dialog;
-import net.rim.device.api.ui.component.RichTextField;
+import net.rim.device.api.ui.component.LabelField;
 import net.rim.device.api.ui.container.HorizontalFieldManager;
 import net.rim.device.api.ui.decor.BackgroundFactory;
-import net.rim.device.api.ui.decor.BorderFactory;
 import estilos.BitmapButtonField;
+import estilos.Metodos;
 
 
 public class materiaLista extends Metodos implements FieldChangeListener {
@@ -33,15 +29,17 @@ BitmapButtonField bts1 , bts2 , bts3 , bts4,bts5,boton;
 		Config statement = new Config();
     public materiaLista()
     {   
-    	getMainManager().setBackground(BackgroundFactory.createLinearGradientBackground(Color.BLACK, Color.BLACK,Color.BLACK,Color.BLACK));
- 		
+    	 Bitmap bitmapfondo = Bitmap.getBitmapResource("notepadlista.png");
+  		getMainManager().setBackground(BackgroundFactory.createBitmapBackground(bitmapfondo));
     	 setTitle("Lista de materias");
     	 
     	 
-        	
+
         	try{
         	URI uri = URI.create(path.Path());
         	Database sqliteDB = DatabaseFactory.open(uri);
+        	
+        	
 
                 Statement se = sqliteDB.createStatement(statement.SelectMateria());
                 
@@ -57,17 +55,17 @@ BitmapButtonField bts1 , bts2 , bts3 , bts4,bts5,boton;
                     
                    
                     
-                    materias[i] = new BitmapButtonField(Bitmap.getBitmapResource("arrow.png"), Bitmap.getBitmapResource("arrow1.png"), BitmapButtonField.FIELD_LEFT);
+                    materias[i] = new BitmapButtonField(Bitmap.getBitmapResource("clips1.png"), Bitmap.getBitmapResource("clips.png"), BitmapButtonField.FIELD_LEFT | BitmapButtonField.FIELD_LEADING);
         			materias[i].setChangeListener(this);
-        			materias[i].setMargin(5, 0, 5, 7);
+        			materias[i].setMargin(3, 0, 5, 7);
         			
         			//ASIGNA TEXTO AL EL ELEMENTO DE LISTA
-        			WLabelField text = new WLabelField(r.getString(0));
-        			text.setMargin(7, 0, 7, 15);
+        			LabelField text = new LabelField(r.getString(0),LabelField.FIELD_VCENTER);
+        			text.setMargin(0, 0, 0, 15);
         			//CREAR ELEMENTO DE LISTA
-        	    	Bitmap elementoBitmap = Bitmap.getBitmapResource("fondomaterias.png");
+        	    	//Bitmap elementoBitmap = Bitmap.getBitmapResource("fondomaterias.png");
         			HorizontalFieldManager elementolista = new HorizontalFieldManager(Field.USE_ALL_WIDTH);
-        			elementolista.setBorder(BorderFactory.createBitmapBorder(new XYEdges(1,1,1,1), elementoBitmap));
+        			//elementolista.setBorder(BorderFactory.createBitmapBorder(new XYEdges(1,1,1,1), elementoBitmap));
         			
         			//AGREGAR A PANTALLA CADA ELEMENTO
         			
@@ -83,7 +81,7 @@ BitmapButtonField bts1 , bts2 , bts3 , bts4,bts5,boton;
                 sqliteDB.close();
                 if (i==0)
                 {
-                	UiApplication.getUiApplication().invokeLater(new Runnable(){
+                	/**UiApplication.getUiApplication().invokeLater(new Runnable(){
                 			public void run(){
 
                 				Object[] choices = new Object[] {"Cargar Materias"};
@@ -94,10 +92,7 @@ BitmapButtonField bts1 , bts2 , bts3 , bts4,bts5,boton;
                 					openScreen(new login());
                 				
                 				}				
-                			}});
-                	
-                	//WLabelField texte = new WLabelField("no hay nada");
-                	//add(texte);
+                			}});*/
                 	
                 }
                 

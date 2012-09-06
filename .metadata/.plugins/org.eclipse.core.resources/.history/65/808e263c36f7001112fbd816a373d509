@@ -1,0 +1,51 @@
+package mypackage;
+
+import net.rim.device.api.system.Bitmap;
+import net.rim.device.api.ui.Field;
+import net.rim.device.api.ui.FieldChangeListener;
+import net.rim.device.api.ui.TransitionContext;
+import net.rim.device.api.ui.Ui;
+import net.rim.device.api.ui.UiEngineInstance;
+import net.rim.device.api.ui.component.BasicEditField;
+import net.rim.device.api.ui.component.EditField;
+import estilos.Metodos;
+
+
+public class notaMostrar extends Metodos implements FieldChangeListener {
+	BasicEditField nota;
+	EditField efTitulo,efNota;	
+	Config path = new Config();
+	Config selecttitulo = new Config();
+	String idApunte;
+	int idMateria;
+	String val;
+	String direccion;
+	Bitmap tagBitmap;
+    public notaMostrar()
+    {   
+    	
+		
+    	
+    }
+
+	public void fieldChanged(Field field, int context) {
+		// TODO Auto-generated method stub
+		
+	
+		
+	}
+	public boolean onClose() {
+		//force the app to quit
+		 TransitionContext transition = new TransitionContext(TransitionContext.TRANSITION_SLIDE);
+	        transition.setIntAttribute(TransitionContext.ATTR_DURATION, 500);
+	        transition.setIntAttribute(TransitionContext.ATTR_DIRECTION, TransitionContext.DIRECTION_RIGHT);
+	        transition.setIntAttribute(TransitionContext.ATTR_STYLE, TransitionContext.STYLE_PUSH);
+	        
+	        UiEngineInstance engine = Ui.getUiEngineInstance();
+	        engine.setTransition(this, null, UiEngineInstance.TRIGGER_PUSH, transition);
+		
+		openScreen(new notaLista(idMateria));
+		return true;
+	}
+
+}

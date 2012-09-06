@@ -1,24 +1,18 @@
 package mypackage;
 
-import net.rim.device.api.database.Cursor;
-import net.rim.device.api.database.Database;
-import net.rim.device.api.database.DatabaseFactory;
-import net.rim.device.api.database.Row;
-import net.rim.device.api.database.Statement;
-import net.rim.device.api.io.URI;
 import net.rim.device.api.system.Bitmap;
 import net.rim.device.api.ui.Field;
 import net.rim.device.api.ui.FieldChangeListener;
-import net.rim.device.api.ui.MenuItem;
 import net.rim.device.api.ui.TransitionContext;
 import net.rim.device.api.ui.Ui;
 import net.rim.device.api.ui.UiEngineInstance;
+import net.rim.device.api.ui.XYEdges;
 import net.rim.device.api.ui.component.BasicEditField;
-import net.rim.device.api.ui.component.BitmapField;
-import net.rim.device.api.ui.component.Dialog;
 import net.rim.device.api.ui.component.EditField;
-import net.rim.device.api.ui.component.RichTextField;
 import net.rim.device.api.ui.container.HorizontalFieldManager;
+import net.rim.device.api.ui.decor.BorderFactory;
+import estilos.BitmapButtonField;
+import estilos.Metodos;
 
 
 public class notaMostrar extends Metodos implements FieldChangeListener {
@@ -31,66 +25,32 @@ public class notaMostrar extends Metodos implements FieldChangeListener {
 	String val;
 	String direccion;
 	Bitmap tagBitmap;
-    public notaMostrar(int id_materia, String id_apunte)
+	BitmapButtonField materia1,materia2,materia3,materia4,materia5,materia6,materia7;
+	BitmapButtonField[] materias={materia1,materia2,materia3,materia4,materia5,materia6};
+    public notaMostrar()
     {   
-    	idMateria = id_materia;
-    	idApunte = id_apunte;
-    	
-    	try{
-        	URI uri = URI.create(path.Path());
-        	Database sqliteDB = DatabaseFactory.open(uri);
-            Statement se = sqliteDB.createStatement(selecttitulo.SelectApunte()+idMateria+" AND id_apunte="+idApunte+"");
-            se.prepare();
-            Cursor c = se.getCursor();
-            Row r;
-          
-            
-            while(c.next()){
-                r = c.getRow();
-                setTitle("TITULO: "+r.getString(0).toUpperCase());
-                
-                val=r.getString(2);
-					if (val.equals("Alta")){
-						direccion="tagAlta.png";				
-						}else if(val.equals("Media")){
-							direccion = "tagMedia.png";
-							}else if(val.equals("Baja")){
-								direccion = "tagBaja.png"; 
-								}
-					 
-					tagBitmap = Bitmap.getBitmapResource(direccion);
-				    BitmapField bfTag = new BitmapField(tagBitmap, Field.FIELD_VCENTER);
-                
-				    
-				RichTextField prioridad = new RichTextField("Prioridad: "+r.getString(2));
-                RichTextField titulo = new RichTextField("\nApunte:\n"+r.getString(1));
-                HorizontalFieldManager hfm = new HorizontalFieldManager();
-                hfm.add(prioridad);
-                hfm.add(bfTag);
-                add(hfm);
-                add(titulo);
-            }
-            
-            se.close();
-            sqliteDB.close();
-    	 }catch (Exception e){
-    	        Dialog.alert("error al cargar el titulo "+e.getMessage().toString());
-    	        e.printStackTrace();
-    	   }  
-    	
-    	
-		
-       
-        
-    	MenuItem miGuardar = new MenuItem("Modificar" , 100, 10){
-    	    public void run(){   
-    	    	openScreen(new notaModificar(idMateria,idApunte));
-    	    }
-    	};
-        
-    	addMenuItem(miGuardar);
-		
-    	
+    	Bitmap elementoBitmap = Bitmap.getBitmapResource("fondomaterias.png");
+    	for(int i =0;i<6;i++){
+    	  materias[i] = new BitmapButtonField(Bitmap.getBitmapResource("barratitulo0.png"), Bitmap.getBitmapResource("barratitulo1.png"), BitmapButtonField.FIELD_LEFT | BitmapButtonField.FIELD_VCENTER );
+			materias[i].setChangeListener(this);
+			
+			
+			//ASIGNA TEXTO AL EL ELEMENTO DE LISTA
+			WLabelField text = new WLabelField("");
+			text.setMargin(0, 0, 0, 15);
+			//CREAR ELEMENTO DE LISTA
+			
+			HorizontalFieldManager elementolista = new HorizontalFieldManager(Field.USE_ALL_WIDTH);
+			elementolista.setBorder(BorderFactory.createBitmapBorder(new XYEdges(0,1,0,0), elementoBitmap));
+			
+			//AGREGAR A PANTALLA CADA ELEMENTO
+			
+			
+			elementolista.add(materias[i]);
+			elementolista.add(text);
+			elementolista.setMargin(2, 5, 2, 5);
+			add(elementolista);
+    	}
     }
 
 	public void fieldChanged(Field field, int context) {

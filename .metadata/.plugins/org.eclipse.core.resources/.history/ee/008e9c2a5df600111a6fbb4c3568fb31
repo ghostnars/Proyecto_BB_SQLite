@@ -1,0 +1,92 @@
+package mypackage;
+
+import net.rim.device.api.database.Cursor;
+import net.rim.device.api.database.Database;
+import net.rim.device.api.database.DatabaseFactory;
+import net.rim.device.api.database.Row;
+import net.rim.device.api.database.Statement;
+import net.rim.device.api.io.URI;
+import net.rim.device.api.ui.UiApplication;
+
+/**
+ * This class extends the UiApplication class, providing a
+ * graphical user interface.
+ */
+public class MyApp extends UiApplication
+{
+    /**
+     * Entry point for application
+     * @param args Command line arguments (not used)
+     */ 
+	static Config ver = new Config();
+	static Config statement = new Config();
+    public static void main(String[] args)
+    {
+        // Create a new instance of the application and make the currently
+        // running thread the application's event dispatch thread.
+        MyApp theApp = new MyApp();       
+        theApp.enterEventDispatcher();
+        
+    
+			
+			
+        
+    }
+    
+
+    /**
+     * Creates a new MyApp object
+     */
+    public MyApp()
+    {   
+    	
+    	try{
+        	URI uri = URI.create(ver.Path());
+        	Database sqliteDB = DatabaseFactory.open(uri);
+        	
+        	Statement st = sqliteDB.createStatement(statement.CreateMateria());
+			st.prepare();
+			st.execute();
+			st.close();
+			
+			Statement ct = sqliteDB.createStatement(statement.CreateApunte());
+			ct.prepare();
+			ct.execute();
+			ct.close();
+        	
+        	
+                Statement se = sqliteDB.createStatement(statement.SelectMateria());
+                
+                se.prepare();
+                Cursor c = se.getCursor();
+                
+                Row r;
+                int i = 0;
+                while(c.next()) 
+                {
+                    r = c.getRow();
+                    se.prepare();
+                    se.execute();
+                    se.close();
+                    i++;
+                }
+                se.close();
+                sqliteDB.close();
+                if(i==0){
+                pushScreen(new login());
+                	
+                }else{
+                	
+                	pushScreen(new materiaLista());
+                }
+    
+}catch(Exception e ){
+
+   // e.printStackTrace();
+}
+    	
+    	
+        // Push a screen onto the UI stack for rendering.
+        
+    }    
+}
