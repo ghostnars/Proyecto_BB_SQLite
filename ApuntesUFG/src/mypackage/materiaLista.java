@@ -29,20 +29,15 @@ BitmapButtonField bts1 , bts2 , bts3 , bts4,bts5,boton;
 		Config statement = new Config();
     public materiaLista()
     {   
-    	 Bitmap bitmapfondo = Bitmap.getBitmapResource("notepadlista.png");
+    	Bitmap bitmapfondo = Bitmap.getBitmapResource("notepadlista.png");
   		getMainManager().setBackground(BackgroundFactory.createBitmapBackground(bitmapfondo));
-    	 setTitle("Lista de materias");
-    	 
-    	 
-
-        	try{
+    	setTitle("Lista de materias");
+    	 try{
         	URI uri = URI.create(path.Path());
         	Database sqliteDB = DatabaseFactory.open(uri);
         	
-        	
 
-                Statement se = sqliteDB.createStatement(statement.SelectMateria());
-                
+            Statement se = sqliteDB.createStatement(statement.SelectMateria());
                 se.prepare();
                 Cursor c = se.getCursor();
                 
@@ -51,14 +46,10 @@ BitmapButtonField bts1 , bts2 , bts3 , bts4,bts5,boton;
                 int i = 0;
                 while(c.next()) 
                 {
-                    r = c.getRow();
-                    
-                   
-                    
+                    r = c.getRow();  
                     materias[i] = new BitmapButtonField(Bitmap.getBitmapResource("clips1.png"), Bitmap.getBitmapResource("clips.png"), BitmapButtonField.FIELD_LEFT | BitmapButtonField.FIELD_LEADING);
         			materias[i].setChangeListener(this);
         			materias[i].setMargin(3, 0, 5, 7);
-        			
         			//ASIGNA TEXTO AL EL ELEMENTO DE LISTA
         			LabelField text = new LabelField(r.getString(0),LabelField.FIELD_VCENTER);
         			text.setMargin(0, 0, 0, 15);
@@ -68,44 +59,29 @@ BitmapButtonField bts1 , bts2 , bts3 , bts4,bts5,boton;
         			//elementolista.setBorder(BorderFactory.createBitmapBorder(new XYEdges(1,1,1,1), elementoBitmap));
         			
         			//AGREGAR A PANTALLA CADA ELEMENTO
-        			
         			elementolista.add(materias[i]);
         			elementolista.add(text);
         			elementolista.setMargin(2, 5, 2, 5);
         			add(elementolista);
                     i++;
-                   
-                    
                 }
+                
                 se.close();
                 sqliteDB.close();
+               
                 if (i==0)
                 {
-                	/**UiApplication.getUiApplication().invokeLater(new Runnable(){
-                			public void run(){
-
-                				Object[] choices = new Object[] {"Cargar Materias"};
-                				int result = Dialog.ask("¿Primera vez? :D", choices, 0);
-
-                				switch (result) {
-                				case 0:
-                					openScreen(new login());
-                				
-                				}				
-                			}});*/
-                	
+              	
                 }
-                
-                
-      
-
-    		
         }catch (Exception e){
         //Dialog.alert("error al cargar la base"+e.getMessage().toString());
         e.printStackTrace();
+        //openScreen(new login());
         }   
     }
-
+    public void cargar(){
+    	openScreen(new login());
+	    }
 	public void fieldChanged(Field field, int context) {
 		// TODO Auto-generated method stub
 		if(materias[0]== field){

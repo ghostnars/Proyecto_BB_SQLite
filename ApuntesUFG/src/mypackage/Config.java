@@ -18,7 +18,6 @@ public class Config {
 		path = "file:///SDCard/Databases/NOTAS/NotasDB_"+version;
 		return path;
 	}
-	
 	public String CreateMateria(){
 		Createmateria = "CREATE TABLE IF NOT EXISTS MATERIA(id_materia INTEGER PRIMARY KEY, nombre_materia TEXT)";
 		return Createmateria;

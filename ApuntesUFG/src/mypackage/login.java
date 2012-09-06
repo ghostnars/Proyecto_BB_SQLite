@@ -235,7 +235,7 @@ public class login extends Metodos implements FieldChangeListener {
             				for(int i=0;i<=result.getAsignaturaInscrita().length ;i++){	
             					String devolucion = result.getAsignaturaInscrita()[i].getNombreAsignatura();
             					//CREA EL STATEMENT PARA GUARDAR POR CADA REPETICION
-            					Statement st1 = sqliteDB.createStatement(statement+"('"+ devolucion +"')");
+            					Statement st1 = sqliteDB.createStatement(statement.InsertMateria()+"('"+ devolucion +"')");
             					st1.prepare();
             					st1.execute();
             					st1.close();

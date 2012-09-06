@@ -10,6 +10,8 @@ import net.rim.device.api.io.URI;
 import net.rim.device.api.system.Bitmap;
 import net.rim.device.api.ui.Field;
 import net.rim.device.api.ui.FieldChangeListener;
+import net.rim.device.api.ui.Font;
+import net.rim.device.api.ui.FontFamily;
 import net.rim.device.api.ui.MenuItem;
 import net.rim.device.api.ui.TransitionContext;
 import net.rim.device.api.ui.Ui;
@@ -35,23 +37,45 @@ public class notaCrear extends Metodos implements FieldChangeListener {
 	int idApunte;
 	int idMateria;
 	DateField fecha;
+
+    
 	private LabelField materia;
+	private Font ftitulo;
+	private Font ffecha;
+	private Font fmateria;
+	private Font fapunte;
+
     public notaCrear(int id_materia)
     {   
     	
+    	 try
+         {
+    		FontFamily ffFont = FontFamily.forName("Comic Sans MS");
+         	ffecha = ffFont.getFont(Font.ITALIC, 13);
+         	fmateria = ffFont.getFont(Font.ANTIALIAS_DEFAULT, 15);
+         	ftitulo = ffFont.getFont(Font.ITALIC, 16); 
+         	fapunte = ffFont.getFont(Font.ANTIALIAS_DEFAULT, 16); 
+         }catch (ClassNotFoundException e){
+         	   System.out.println(e.getMessage());
+         }
 
     	idMateria = id_materia;
     	
     	Bitmap bitmapfondo = Bitmap.getBitmapResource("notepad4.png");
-    	//Bitmap bitmaptexto = Bitmap.getBitmapResource("fondotexto.png");
 		getMainManager().setBackground(BackgroundFactory.createBitmapBackground(bitmapfondo));    	
     	
 		VerticalFieldManager allContent = new VerticalFieldManager(VerticalFieldManager.USE_ALL_WIDTH);
         
         int iSetTo = 2;
         ocfPrioridad = new ObjectChoiceField("Prioridad: ", choices, iSetTo);
-    	 setTitle(ocfPrioridad);
-		
+    	setTitle(ocfPrioridad);
+    	
+    	 	SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+    	 	fecha = new DateField("", System.currentTimeMillis(), dateFormat, Field.FIELD_RIGHT);
+            fecha.setMargin(5,5,0,0);
+            fecha.setFont(ffecha);
+            allContent.add(fecha);
+            
         try{
         	URI uri = URI.create(path.Path());
         	Database sqliteDB = DatabaseFactory.open(uri);
@@ -64,23 +88,22 @@ public class notaCrear extends Metodos implements FieldChangeListener {
             while(c.next()){
                 r = c.getRow();
                 materia = new LabelField(r.getString(0)) ;
-                materia.setMargin(3, 0, 0, 25);
+                materia.setMargin(3, 0, 4, 23);
+                materia.setFont(fmateria);
                 allContent.add(materia);
             }
             
             se.close();
             sqliteDB.close(); 
-            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
-             fecha = new DateField("", System.currentTimeMillis(), dateFormat, Field.FIELD_LEFT);
-            fecha.setMargin(5,155,0,0);
-            allContent.add(fecha);
+            
+             
             
             VerticalFieldManager contentTitulo = new VerticalFieldManager(VerticalFieldManager.FIELD_LEFT);
-            contentTitulo.setMargin(5,0,0,25);
+            contentTitulo.setMargin(5,0,0,21);
             
-    	    efTitulo = new EditField("Titulo: ", "", 32, EditField.FILTER_FILENAME){
+    	    efTitulo = new EditField("Titulo: ", "", 30, EditField.FILTER_FILENAME){
             	public int getPreferredHeight(){
-                    return 40;
+                    return 50;
                 }
 
                 public int getPreferredWidth(){
@@ -92,7 +115,7 @@ public class notaCrear extends Metodos implements FieldChangeListener {
                     super.layout(getPreferredWidth(), getPreferredHeight());
                 }
             };
-
+            efTitulo.setFont(ftitulo);
             contentTitulo.add(efTitulo);
             allContent.add(contentTitulo);
            
@@ -100,7 +123,7 @@ public class notaCrear extends Metodos implements FieldChangeListener {
            
             
             VerticalFieldManager contentNota = new VerticalFieldManager(VerticalFieldManager.FIELD_HCENTER);
-            contentNota.setMargin(22,0,0,22);
+            contentNota.setMargin(27,0,0,22);
             //EDITFIELD TITULO  
 
     	    efNota = new EditField("", "", 500, EditField.FILTER_DEFAULT){
@@ -117,7 +140,7 @@ public class notaCrear extends Metodos implements FieldChangeListener {
                     super.layout(getPreferredWidth(), getPreferredHeight());
                 }
             };
-           
+            efNota.setFont(fapunte);
             contentNota.add(efNota);
             allContent.add(contentNota);
             add(allContent);

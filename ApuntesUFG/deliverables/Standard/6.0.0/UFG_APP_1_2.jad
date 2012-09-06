@@ -1,9 +1,9 @@
-RIM-COD-SHA1-4: f4 3d bf 5a 79 7f 50 cf c5 a7 e8 29 62 74 5c 1c 48 44 ed 8e
-RIM-COD-SHA1-3: 8f c7 a9 a2 95 97 bf c1 0d f1 f9 e0 d6 c9 ce ec 2d 4c fc 37
-RIM-COD-SHA1-2: 38 a1 f2 85 78 6a a2 79 a8 fb be 64 15 df ca 22 03 77 fb 15
-RIM-COD-SHA1-1: ea 1f d4 f7 4f 1e f2 84 b9 62 aa ce 09 87 35 de 23 b4 98 7b
+RIM-COD-SHA1-4: f9 ff 60 bc 4a 78 d1 1b 52 43 76 42 21 8f cd 66 2b ae 18 77
+RIM-COD-SHA1-3: 91 8c 77 1f fc 59 1c d5 85 c0 d0 8f ba e5 25 32 4f c9 91 54
+RIM-COD-SHA1-2: e4 fb a7 68 4e 66 e4 4b 8e 78 e8 58 5a 48 31 1e 26 db 77 2c
+RIM-COD-SHA1-1: 2e 97 76 64 43 50 dd db 5e e3 ee 23 6e f0 77 c5 fa fc 07 e1
 RIM-MIDlet-Flags-1: 0
-MIDlet-Jar-Size: 822444
+MIDlet-Jar-Size: 823743
 MIDlet-Name: ApuntesUFG
 MIDlet-Jar-URL: ApuntesUFG.jar
 MicroEdition-Configuration: CLDC-1.1
@@ -16,7 +16,7 @@ RIM-COD-URL-4: UFG_APP_1_2-4.cod
 RIM-COD-URL-3: UFG_APP_1_2-3.cod
 RIM-COD-URL-2: UFG_APP_1_2-2.cod
 RIM-COD-URL-1: UFG_APP_1_2-1.cod
-RIM-COD-Size-7: 70740
+RIM-COD-Size-7: 70272
 RIM-COD-Size-6: 56740
 RIM-COD-Size-5: 52172
 RIM-COD-Size-4: 50368
@@ -24,15 +24,15 @@ RIM-COD-Size-3: 57660
 RIM-COD-Module-Name: UFG_APP_1_2
 RIM-COD-Size-2: 50460
 RIM-COD-Size-1: 56212
-RIM-COD-SHA1: c4 5c b3 3f 20 ec 3b 70 66 ce 02 04 86 77 32 30 8b af 3f 76
-RIM-COD-Size: 66292
+RIM-COD-SHA1: e8 5e 3c 0a 07 0f 64 1d 68 e5 9e c1 b7 8f 87 dd e3 df 71 e9
+RIM-COD-Size: 67440
 MicroEdition-Profile: MIDP-2.0
 MIDlet-Vendor: IMOVES
 MIDlet-1: ApuntesUFG,img/icon.png,
 RIM-COD-URL: UFG_APP_1_2.cod
 Manifest-Version: 1.0
 MIDlet-Version: 1.0
-RIM-COD-SHA1-7: 84 21 e6 35 a2 d1 0a 07 d9 3f 6f 32 09 05 c3 73 88 f6 de 1c
-RIM-COD-Creation-Time: 1346917871
-RIM-COD-SHA1-6: 27 97 1d 49 11 ff cb d8 77 31 15 80 22 f1 8d 8f 6a cd 71 d0
-RIM-COD-SHA1-5: d5 64 5c 64 ac 60 b0 d8 c7 e9 b3 95 8a 27 1a bc b8 83 1c e3
+RIM-COD-SHA1-7: 99 54 b0 81 c4 17 2b 89 1d 1b 1d 79 d1 e9 0e d5 ba 69 8e 65
+RIM-COD-Creation-Time: 1346935186
+RIM-COD-SHA1-6: ab 82 b6 e3 ff 55 d5 f6 84 37 af 0a dc 18 2c 27 8e d6 af 2a
+RIM-COD-SHA1-5: 1e cb 7d fb f7 4c b6 77 fd ad c6 89 af b4 ee 1e be 5b 93 c7
