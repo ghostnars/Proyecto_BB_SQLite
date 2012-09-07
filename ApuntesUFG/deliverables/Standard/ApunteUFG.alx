@@ -1,0 +1,31 @@
+<loader version="1.0">
+	<application id="ApunteUFG">
+		<name >
+			ApuntesUFG
+		</name>
+		<description >
+			Apuntes Ufg
+		</description>
+		<version >
+			1.1
+		</version>
+		<vendor >
+			IMOVES
+		</vendor>
+		<copyright >
+			Copyright (c) 2012 IMOVES
+		</copyright>
+		<fileset Java="1.55" _blackberryVersion="[6.0.0)">
+			<directory >
+				6.0.0
+			</directory>
+			<files >
+				ApunteUFG.cod
+
+			</files>
+
+		</fileset>
+
+	</application>
+
+</loader>

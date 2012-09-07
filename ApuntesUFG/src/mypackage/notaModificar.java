@@ -8,10 +8,12 @@ import net.rim.device.api.database.Statement;
 import net.rim.device.api.i18n.SimpleDateFormat;
 import net.rim.device.api.io.URI;
 import net.rim.device.api.system.Bitmap;
+import net.rim.device.api.ui.Color;
 import net.rim.device.api.ui.Field;
 import net.rim.device.api.ui.FieldChangeListener;
 import net.rim.device.api.ui.Font;
 import net.rim.device.api.ui.FontFamily;
+import net.rim.device.api.ui.Graphics;
 import net.rim.device.api.ui.MenuItem;
 import net.rim.device.api.ui.TransitionContext;
 import net.rim.device.api.ui.Ui;
@@ -43,35 +45,19 @@ public class notaModificar extends Metodos implements FieldChangeListener {
 	LabelField lblfecha;
 	String choices[] = {"Alta","Media","Baja"};
 	Config statement = new Config();
-	private Font ftitulo;
-	private Font ffecha;
-	private Font fmateria;
-	private Font fapunte;
+
     public notaModificar(int id_materia,String id_apunte)
     {   
-    	Bitmap bitmapfondo = Bitmap.getBitmapResource("notepad4.png");
+    	Bitmap bitmapfondo = Bitmap.getBitmapResource("fondoapunte.png");
 		getMainManager().setBackground(BackgroundFactory.createBitmapBackground(bitmapfondo));
 
+		VerticalFieldManager allContent = new VerticalFieldManager(VerticalFieldManager.FIELD_HCENTER);
+		VerticalFieldManager headContent = new VerticalFieldManager(VerticalFieldManager.FIELD_LEFT);
+		headContent.setMargin(5, 0, 0, 0);
 		
     	idMateria = id_materia;
     	idApunte = id_apunte;
-    	
-    	
-		VerticalFieldManager allContent = new VerticalFieldManager(VerticalFieldManager.USE_ALL_WIDTH);
-		
-
-       
-   	 try
-     {
-		FontFamily ffFont = FontFamily.forName("Comic Sans MS");
-     	ffecha = ffFont.getFont(Font.ITALIC, 13);
-     	fmateria = ffFont.getFont(Font.ANTIALIAS_DEFAULT, 15);
-     	ftitulo = ffFont.getFont(Font.BOLD, 14); 
-     	fapunte = ffFont.getFont(Font.ANTIALIAS_DEFAULT, 16); 
-     }catch (ClassNotFoundException e){
-     	   System.out.println(e.getMessage());
-     }
-    	
+ 
     	
     	  int iSetTo = 2;
           ocfPrioridad = new ObjectChoiceField("Prioridad: ", choices, iSetTo);
@@ -79,7 +65,7 @@ public class notaModificar extends Metodos implements FieldChangeListener {
           setTitle(ocfPrioridad);
     	
           SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
-          fecha = new DateField("", System.currentTimeMillis(), dateFormat, Field.FIELD_RIGHT);
+          fecha = new DateField("", System.currentTimeMillis(), dateFormat);
         
           
     	try{
@@ -93,10 +79,12 @@ public class notaModificar extends Metodos implements FieldChangeListener {
             
             while(c.next()){
                 r = c.getRow();
-                materia = new LabelField(r.getString(0)) ;
-                materia.setMargin(0, 0, 0, 22);
-                materia.setFont(fmateria);
-                
+                materia = new LabelField(r.getString(0)){
+                    public void paint(Graphics g){      
+                        g.setColor(Color.WHITE);
+                        super.paint(g);
+                   }};;
+                materia.setMargin(0, 0, 0, 5);
                
                 
             }
@@ -132,23 +120,22 @@ public class notaModificar extends Metodos implements FieldChangeListener {
             se1.close();
             sqliteDB1.close();
             
-            lblfecha = new LabelField(date,LabelField.FIELD_RIGHT);
-            lblfecha.setMargin(6,5,5,25);
-            lblfecha.setFont(ffecha);
-            allContent.add(lblfecha);
-            allContent.add(materia);
-            
-            VerticalFieldManager contentTitulo = new VerticalFieldManager(VerticalFieldManager.FIELD_HCENTER);
-            contentTitulo.setMargin(9,0,0,22);
-            
-         
+            lblfecha = new LabelField(date,LabelField.LEFT){
+                public void paint(Graphics g){      
+                    g.setColor(Color.WHITE);
+                    super.paint(g);
+               }};;
+            lblfecha.setMargin(5,0,5,5);
+            headContent.add(lblfecha);
+            headContent.add(materia);
+  
     	    efTitulo = new EditField("", titulos, 30, EditField.FILTER_FILENAME){
             	public int getPreferredHeight(){
                     return 50;
                 }
 
                 public int getPreferredWidth(){
-                    return 310;
+                    return 280;
                 }
 
                 public void layout(int width, int height){
@@ -156,14 +143,13 @@ public class notaModificar extends Metodos implements FieldChangeListener {
                     super.layout(getPreferredWidth(), getPreferredHeight());
                 }
             };
-            efTitulo.setFont(ftitulo);
-            contentTitulo.add(efTitulo);
-            allContent.add(contentTitulo);
+            efTitulo.setBackground(BackgroundFactory.createLinearGradientBackground(Color.GAINSBORO, Color.GAINSBORO,Color.GAINSBORO,Color.GAINSBORO));
+            efTitulo.setPadding(5, 5, 5, 5);
+            efTitulo.setMargin(5, 5, 15, 5);
             
             
             VerticalFieldManager contentNota = new VerticalFieldManager(VerticalFieldManager.FIELD_HCENTER);
-            contentNota.setMargin(28,0,0,22);
-            //EDITFIELD TITULO  
+            contentNota.setMargin(0,0,0,0);
 
     	    efNota = new EditField("", apuntes, 500, EditField.FILTER_DEFAULT){
             	public int getPreferredHeight(){
@@ -171,7 +157,7 @@ public class notaModificar extends Metodos implements FieldChangeListener {
                 }
 
                 public int getPreferredWidth(){
-                    return 300;
+                    return 280;
                 }
 
                 public void layout(int width, int height){
@@ -180,8 +166,12 @@ public class notaModificar extends Metodos implements FieldChangeListener {
                 }
             };
            
+            efNota.setBackground(BackgroundFactory.createLinearGradientBackground(Color.GAINSBORO, Color.GAINSBORO,Color.GAINSBORO,Color.GAINSBORO));
+            efNota.setPadding(5, 5, 35, 5);
+            efNota.setMargin(5, 5, 5, 5);
+            contentNota.add(efTitulo);
             contentNota.add(efNota);
-            efNota.setFont(fapunte);
+            allContent.add(headContent);
             allContent.add(contentNota);
             add(allContent);
    
@@ -197,7 +187,7 @@ public class notaModificar extends Metodos implements FieldChangeListener {
         
       
 	
-	MenuItem miGuardar = new MenuItem("Modificar" , 100, 10){
+	MenuItem miGuardar = new MenuItem("Modificar" , 100, 1){
 	    public void run(){
 	    	  String textoTitulo = efTitulo.getText().toLowerCase();
 	          String textoApunte = efNota.getText();
@@ -235,7 +225,7 @@ public class notaModificar extends Metodos implements FieldChangeListener {
         
     	
     	
-    	MenuItem menuEliminar = new MenuItem("Eliminar Apunte" , 100, 10){
+    	MenuItem menuEliminar = new MenuItem("Eliminar Apunte" , 100, 2){
     	    public void run(){
     	    	
     	      

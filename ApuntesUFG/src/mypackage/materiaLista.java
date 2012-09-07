@@ -7,14 +7,17 @@ import net.rim.device.api.database.Row;
 import net.rim.device.api.database.Statement;
 import net.rim.device.api.io.URI;
 import net.rim.device.api.system.Bitmap;
+import net.rim.device.api.ui.Color;
 import net.rim.device.api.ui.Field;
 import net.rim.device.api.ui.FieldChangeListener;
 import net.rim.device.api.ui.TransitionContext;
 import net.rim.device.api.ui.Ui;
 import net.rim.device.api.ui.UiEngineInstance;
+import net.rim.device.api.ui.XYEdges;
 import net.rim.device.api.ui.component.LabelField;
 import net.rim.device.api.ui.container.HorizontalFieldManager;
 import net.rim.device.api.ui.decor.BackgroundFactory;
+import net.rim.device.api.ui.decor.BorderFactory;
 import estilos.BitmapButtonField;
 import estilos.Metodos;
 
@@ -29,9 +32,11 @@ BitmapButtonField bts1 , bts2 , bts3 , bts4,bts5,boton;
 		Config statement = new Config();
     public materiaLista()
     {   
-    	Bitmap bitmapfondo = Bitmap.getBitmapResource("notepadlista.png");
-  		getMainManager().setBackground(BackgroundFactory.createBitmapBackground(bitmapfondo));
+    	//Bitmap bitmapfondo = Bitmap.getBitmapResource("notepadlista.png");
+  		//getMainManager().setBackground(BackgroundFactory.createBitmapBackground(bitmapfondo));
+    	getMainManager().setBackground(BackgroundFactory.createLinearGradientBackground(Color.BLACK, Color.BLACK,Color.BLACK,Color.BLACK));
     	setTitle("Lista de materias");
+    	Bitmap elementoBitmap = Bitmap.getBitmapResource("fondomaterias.png");
     	 try{
         	URI uri = URI.create(path.Path());
         	Database sqliteDB = DatabaseFactory.open(uri);
@@ -47,21 +52,21 @@ BitmapButtonField bts1 , bts2 , bts3 , bts4,bts5,boton;
                 while(c.next()) 
                 {
                     r = c.getRow();  
-                    materias[i] = new BitmapButtonField(Bitmap.getBitmapResource("clips1.png"), Bitmap.getBitmapResource("clips.png"), BitmapButtonField.FIELD_LEFT | BitmapButtonField.FIELD_LEADING);
+                    materias[i] = new BitmapButtonField(Bitmap.getBitmapResource("barraboton0.png"), Bitmap.getBitmapResource("barraboton1.png"), BitmapButtonField.FIELD_LEFT | BitmapButtonField.FIELD_LEADING);
         			materias[i].setChangeListener(this);
-        			materias[i].setMargin(3, 0, 5, 7);
+        			materias[i].setMargin(0, 0, 0, 0);
         			//ASIGNA TEXTO AL EL ELEMENTO DE LISTA
-        			LabelField text = new LabelField(r.getString(0),LabelField.FIELD_VCENTER);
+        			WLabelField text = new WLabelField(r.getString(0));
         			text.setMargin(0, 0, 0, 15);
         			//CREAR ELEMENTO DE LISTA
-        	    	//Bitmap elementoBitmap = Bitmap.getBitmapResource("fondomaterias.png");
+        	    	
         			HorizontalFieldManager elementolista = new HorizontalFieldManager(Field.USE_ALL_WIDTH);
-        			//elementolista.setBorder(BorderFactory.createBitmapBorder(new XYEdges(1,1,1,1), elementoBitmap));
+        			elementolista.setBorder(BorderFactory.createBitmapBorder(new XYEdges(0,1,0,0), elementoBitmap));
         			
         			//AGREGAR A PANTALLA CADA ELEMENTO
         			elementolista.add(materias[i]);
         			elementolista.add(text);
-        			elementolista.setMargin(2, 5, 2, 5);
+        			elementolista.setMargin(3, 3, 3, 3);
         			add(elementolista);
                     i++;
                 }

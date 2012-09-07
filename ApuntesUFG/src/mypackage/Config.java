@@ -14,6 +14,7 @@ public class Config {
 	private String Selectapunte;
 	private String Updateapunte;
 	private String Deleteapunte;
+	private String Deletetodo;
 	public String Path(){
 		path = "file:///SDCard/Databases/NOTAS/NotasDB_"+version;
 		return path;
@@ -58,5 +59,8 @@ public class Config {
 		Deleteapunte = "DELETE FROM APUNTE WHERE id_apunte = ";
 		return Deleteapunte;
 	}
-	
+	public String DeleteTodo(){
+		Deletetodo = "DELETE FROM APUNTE WHERE id_materia = ";
+		return Deletetodo;
+	}
 }

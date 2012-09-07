@@ -9,12 +9,15 @@ import net.rim.device.api.database.Row;
 import net.rim.device.api.database.Statement;
 import net.rim.device.api.io.URI;
 import net.rim.device.api.system.Bitmap;
+import net.rim.device.api.ui.Color;
 import net.rim.device.api.ui.Field;
 import net.rim.device.api.ui.FieldChangeListener;
 import net.rim.device.api.ui.MenuItem;
 import net.rim.device.api.ui.TransitionContext;
 import net.rim.device.api.ui.Ui;
+import net.rim.device.api.ui.UiApplication;
 import net.rim.device.api.ui.UiEngineInstance;
+import net.rim.device.api.ui.XYEdges;
 import net.rim.device.api.ui.component.BasicEditField;
 import net.rim.device.api.ui.component.BitmapField;
 import net.rim.device.api.ui.component.Dialog;
@@ -22,6 +25,7 @@ import net.rim.device.api.ui.component.EditField;
 import net.rim.device.api.ui.component.LabelField;
 import net.rim.device.api.ui.container.HorizontalFieldManager;
 import net.rim.device.api.ui.decor.BackgroundFactory;
+import net.rim.device.api.ui.decor.BorderFactory;
 import estilos.BitmapButtonField;
 import estilos.Metodos;
 
@@ -42,8 +46,11 @@ public class notaLista extends Metodos implements FieldChangeListener {
     public notaLista(int id_materia)
     { 
     	 idMateria = id_materia;
-    	 Bitmap bitmapfondo = Bitmap.getBitmapResource("notepadlista.png");
- 		getMainManager().setBackground(BackgroundFactory.createBitmapBackground(bitmapfondo));
+    	//Bitmap bitmapfondo = Bitmap.getBitmapResource("notepadlista.png");
+ 		//getMainManager().setBackground(BackgroundFactory.createBitmapBackground(bitmapfondo));
+    	 getMainManager().setBackground(BackgroundFactory.createLinearGradientBackground(Color.BLACK, Color.BLACK,Color.BLACK,Color.BLACK));
+  		
+    	 Bitmap elementoBitmap = Bitmap.getBitmapResource("fondomaterias.png");
     	 try{
          	URI uri1 = URI.create(path.Path());
          	Database sqliteDB1 = DatabaseFactory.open(uri1);
@@ -85,9 +92,9 @@ public class notaLista extends Metodos implements FieldChangeListener {
                      
  					
 
- 					bb.addElement(new BitmapButtonField(Bitmap.getBitmapResource("clips1.png"), Bitmap.getBitmapResource("clips.png"), BitmapButtonField.FIELD_LEFT | BitmapButtonField.FIELD_VCENTER));
+ 					bb.addElement(new BitmapButtonField(Bitmap.getBitmapResource("barraboton0.png"), Bitmap.getBitmapResource("barraboton1.png"), BitmapButtonField.FIELD_LEFT | BitmapButtonField.FIELD_VCENTER));
  					((Field) bb.elementAt(i)).setChangeListener(this);
- 					((Field) bb.elementAt(i)).setMargin(3, 4, 3, 0);
+ 					((Field) bb.elementAt(i)).setMargin(0, 0, 0, 0);
  					
  					//ASIGNA TEXTO AL EL ELEMENTO DE LISTA
  					
@@ -102,25 +109,24 @@ public class notaLista extends Metodos implements FieldChangeListener {
  									direccion = "tagBaja.png"; 
  									}
  						 tagBitmap = Bitmap.getBitmapResource(direccion);
- 				        BitmapField bfTag = new BitmapField(tagBitmap, Field.FIELD_VCENTER);
- 						
- 					LabelField text = new LabelField(r.getString(0),LabelField.FIELD_VCENTER);
+ 				       // Bitmap bfTag = new BitmapField(tagBitmap, Field.FIELD_VCENTER | Field.FIELD_RIGHT);
+ 						//bfTag.setMargin(0, 0, 0, 125);
+ 					WLabelField text = new WLabelField(r.getString(0));
  					text.setMargin(0, 5, 0, 5);
  					idApunte.addElement(""+r.getInteger(1));
  					
  					
  					//CREAR ELEMENTO DE LISTA
- 			    	//Bitmap elementoBitmap = Bitmap.getBitmapResource("fondomaterias.png");
+ 			    	
  					HorizontalFieldManager elementolista = new HorizontalFieldManager(Field.USE_ALL_WIDTH);
- 					//elementolista.setBorder(BorderFactory.createBitmapBorder(new XYEdges(1,1,1,1), elementoBitmap));
- 					
+ 					elementolista.setBorder(BorderFactory.createBitmapBorder(new XYEdges(0,1,0,0), elementoBitmap));
+ 					elementolista.setBorder(BorderFactory.createBitmapBorder(new XYEdges(0,10,0,0), tagBitmap));
  					//AGREGAR A PANTALLA CADA ELEMENTO		
- 					elementolista.setMargin(3,5,3,5);
+ 					elementolista.setMargin(3,3,3,3);
  					elementolista.add((Field)bb.elementAt(i));
- 					elementolista.add(bfTag);
+ 					
+ 					//elementolista.add(bfTag);
  					elementolista.add(text);
- 					
- 					
  					add(elementolista);		
  					
                      i++;
@@ -148,15 +154,50 @@ public class notaLista extends Metodos implements FieldChangeListener {
     	 
 	   
 	   	
-    	MenuItem mymenu = new MenuItem("Nuevo Apunte" , 100, 10){
+    	MenuItem mymenu = new MenuItem("Nuevo Apunte" , 100, 1){
     	    public void run(){
     	       
     	    	openScreen(new notaCrear(idMateria));
     	       
     	    }
     	};
-        
-    	addMenuItem(mymenu);
+    	MenuItem mymenu2 = new MenuItem("Eliminar todo" , 100, 2){
+    	    public void run(){
+    	    	UiApplication.getUiApplication().invokeLater(new Runnable(){
+    				public void run(){
+
+    					Object[] choices = new Object[] {"Cancelar", "Eliminar" };
+    					int result = Dialog.ask("Desea eliminar todo?", choices, 0);
+
+    					switch (result) {
+    					case 0:
+    						break;
+    					case 1:
+    						try{
+    		    	    		 
+    		    	    		 
+    	    		         	URI uri1 = URI.create(path.Path());
+    	    		         	Database sqliteDB1 = DatabaseFactory.open(uri1);
+    	    		         	Statement st = sqliteDB1.createStatement(statement.DeleteTodo()+idMateria);
+    	    		            st.prepare();
+    	    		            st.execute();
+    	    		            st.close();
+    	    		            sqliteDB1.close();
+    	    		            Dialog.alert("Eliminado");
+    	    		         }catch (Exception e){
+    	    		         Dialog.alert("Error al eliminar "+e.getMessage().toString());
+    	    		         e.printStackTrace();
+    	    		         }
+    						openScreen(new materiaLista());
+    						break;
+    					}				
+    				}});
+
+    	    	  
+    	    	         }
+    	    	};
+        addMenuItem(mymenu);
+    	addMenuItem(mymenu2);
 }
 	public void fieldChanged(Field field, int context) {
 		// TODO Auto-generated method stub
