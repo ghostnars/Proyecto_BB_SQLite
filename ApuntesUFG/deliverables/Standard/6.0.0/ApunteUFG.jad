@@ -1,35 +1,38 @@
-Manifest-Version: 1.0
-MIDlet-Version: 1.1
-MIDlet-Jar-Size: 611798
-RIM-COD-URL-5: ApunteUFG-5.cod
-RIM-COD-SHA1-5: 8b 97 6e fd 52 72 84 29 c6 54 93 f4 c9 43 2b cd 78 f6 48 b4
-RIM-COD-URL-4: ApunteUFG-4.cod
-RIM-COD-SHA1-4: 08 0a 0f 21 3d 45 fe af a9 24 26 e0 9d 6d c8 eb a4 d0 74 ad
-RIM-COD-URL-3: ApunteUFG-3.cod
-RIM-COD-SHA1-3: 6f bd 8c d9 b9 c8 19 da e2 2c cd 11 39 66 95 83 ec df a5 23
-RIM-COD-URL-2: ApunteUFG-2.cod
-MicroEdition-Configuration: CLDC-1.1
-MIDlet-Jar-URL: ApuntesUFG.jar
-RIM-MIDlet-Icon-1-1: img/icon.png,focused
-RIM-COD-Module-Dependencies: net_rim_cldc,net_rim_database,net_rim_jaxrpc,net_rim_os
-RIM-COD-Size-5: 69008
-RIM-COD-SHA1-2: 22 ad bc d1 28 41 e3 25 d2 2a 1f 85 cd 7c 27 cf 44 79 8d 63
-RIM-COD-URL-1: ApunteUFG-1.cod
-RIM-COD-Size-4: 57528
-RIM-COD-SHA1-1: ea 58 b2 85 24 b1 11 e0 0e df f1 a9 11 48 57 46 4d 42 cc 5d
-RIM-COD-Size-3: 56864
-RIM-COD-Size-2: 50412
+RIM-COD-SHA1-4: e6 1f 2f 01 66 f6 69 e8 c8 cf e8 60 f6 0c f3 d6 2b 64 fd 83
+RIM-COD-SHA1-3: ce 2b b3 87 1c 6e 64 59 9f 67 c2 5d 7e ff bc 5b be 1c 0c 81
+RIM-COD-SHA1-2: 17 44 4d 51 73 cd 7b 0d 38 07 c7 2d 34 48 24 bd 0e 8c db 07
+RIM-COD-SHA1-1: e6 3b e8 dd 51 c6 3b 36 f1 cf aa 97 04 b3 f6 c0 c2 ed 52 01
 RIM-MIDlet-Flags-1: 0
-RIM-COD-Size-1: 53936
-RIM-COD-Module-Name: ApunteUFG
-RIM-COD-Size: 71636
+MIDlet-Jar-Size: 649429
 MIDlet-Name: ApuntesUFG
-RIM-COD-Creation-Time: 1347010102
+MIDlet-Jar-URL: ApuntesUFG.jar
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Description: Apuntes Ufg
 RIM-MIDlet-Position-1: 2
+RIM-COD-URL-6: ApunteUFG-6.cod
+RIM-COD-Module-Dependencies: net_rim_cldc,net_rim_jaxrpc,net_rim_database,net_rim_os
+RIM-COD-URL-5: ApunteUFG-5.cod
+RIM-COD-URL-4: ApunteUFG-4.cod
+RIM-COD-URL-3: ApunteUFG-3.cod
+RIM-COD-URL-2: ApunteUFG-2.cod
+RIM-COD-URL-1: ApunteUFG-1.cod
+RIM-COD-Size-6: 67172
+RIM-COD-Size-5: 42920
+RIM-COD-Size-4: 54956
+RIM-COD-Size-3: 46636
+RIM-COD-Module-Name: ApunteUFG
+RIM-COD-Size-2: 50424
+RIM-COD-Size-1: 50448
+RIM-MIDlet-Icon-Count-1: 1
+RIM-COD-SHA1: bf c8 64 f7 c2 2b 7d 65 f2 52 69 ac 84 58 78 35 ef 97 12 80
+RIM-COD-Size: 72160
+MicroEdition-Profile: MIDP-2.0
+RIM-MIDlet-Icon-1-1: img/icon.png,focused
+MIDlet-Vendor: IMOVES
 MIDlet-1: ApuntesUFG,img/icon1.png,
 RIM-COD-URL: ApunteUFG.cod
-MIDlet-Description: Apuntes Ufg
-RIM-COD-SHA1: d2 08 2d 84 01 ee 21 de ac f7 df 11 96 04 ae 2c 3f af 73 7e
-MicroEdition-Profile: MIDP-2.0
-MIDlet-Vendor: IMOVES
-RIM-MIDlet-Icon-Count-1: 1
+Manifest-Version: 1.0
+MIDlet-Version: 1.1
+RIM-COD-SHA1-6: 7f 3b 3d e8 ee 07 e3 36 09 a4 17 83 6d 1b b0 6e 0b 62 d3 c5
+RIM-COD-Creation-Time: 1347030386
+RIM-COD-SHA1-5: 5d 08 78 a2 85 b4 19 10 ff 54 5a 3f 00 96 fb 8f b4 e1 1c e3

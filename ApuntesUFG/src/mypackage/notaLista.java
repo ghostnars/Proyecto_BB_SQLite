@@ -46,8 +46,6 @@ public class notaLista extends Metodos implements FieldChangeListener {
     public notaLista(int id_materia)
     { 
     	 idMateria = id_materia;
-    	//Bitmap bitmapfondo = Bitmap.getBitmapResource("notepadlista.png");
- 		//getMainManager().setBackground(BackgroundFactory.createBitmapBackground(bitmapfondo));
     	 getMainManager().setBackground(BackgroundFactory.createLinearGradientBackground(Color.BLACK, Color.BLACK,Color.BLACK,Color.BLACK));
   		
     	 Bitmap elementoBitmap = Bitmap.getBitmapResource("fondomaterias.png");
@@ -90,16 +88,6 @@ public class notaLista extends Metodos implements FieldChangeListener {
                  {
                      r = c.getRow();
                      
- 					
-
- 					bb.addElement(new BitmapButtonField(Bitmap.getBitmapResource("barraboton0.png"), Bitmap.getBitmapResource("barraboton1.png"), BitmapButtonField.FIELD_LEFT | BitmapButtonField.FIELD_VCENTER));
- 					((Field) bb.elementAt(i)).setChangeListener(this);
- 					((Field) bb.elementAt(i)).setMargin(0, 0, 0, 0);
- 					
- 					//ASIGNA TEXTO AL EL ELEMENTO DE LISTA
- 					
- 					
- 						
  						val=r.getString(2);
  						if (val.equals("Alta")){
  							direccion="tagAlta.png";				
@@ -109,6 +97,16 @@ public class notaLista extends Metodos implements FieldChangeListener {
  									direccion = "tagBaja.png"; 
  									}
  						 tagBitmap = Bitmap.getBitmapResource(direccion);
+
+ 					bb.addElement(new BitmapButtonField(Bitmap.getBitmapResource(direccion), Bitmap.getBitmapResource("barraboton2.png"), BitmapButtonField.FIELD_LEFT | BitmapButtonField.FIELD_VCENTER));
+ 					((Field) bb.elementAt(i)).setChangeListener(this);
+ 					((Field) bb.elementAt(i)).setMargin(0, 0, 0, 0);
+ 					
+ 					//ASIGNA TEXTO AL EL ELEMENTO DE LISTA
+ 					
+ 					
+ 						
+ 					
  				       // Bitmap bfTag = new BitmapField(tagBitmap, Field.FIELD_VCENTER | Field.FIELD_RIGHT);
  						//bfTag.setMargin(0, 0, 0, 125);
  					WLabelField text = new WLabelField(r.getString(0));
@@ -120,7 +118,7 @@ public class notaLista extends Metodos implements FieldChangeListener {
  			    	
  					HorizontalFieldManager elementolista = new HorizontalFieldManager(Field.USE_ALL_WIDTH);
  					elementolista.setBorder(BorderFactory.createBitmapBorder(new XYEdges(0,1,0,0), elementoBitmap));
- 					elementolista.setBorder(BorderFactory.createBitmapBorder(new XYEdges(0,10,0,0), tagBitmap));
+ 					//elementolista.setBorder(BorderFactory.createBitmapBorder(new XYEdges(0,0,0,5), tagBitmap));
  					//AGREGAR A PANTALLA CADA ELEMENTO		
  					elementolista.setMargin(3,3,3,3);
  					elementolista.add((Field)bb.elementAt(i));
