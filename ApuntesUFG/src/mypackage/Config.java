@@ -1,6 +1,6 @@
 package mypackage;
 public class Config {
-	private String version = "0.1.0.0.sqlite";
+	private String version = "0.1.0.3.sqlite";
 	private String path;
 	private String Createmateria;
 	private String Createapunte;
@@ -13,6 +13,8 @@ public class Config {
 	private String Updateapunte;
 	private String Deleteapunte;
 	private String Deletetodo;
+	private String Deletetableapunte;
+	private String Deletetablemateria;
 	//Direccion + la version de la base de datos
 	public String Path(){
 		path = "file:///SDCard/Databases/NOTAS/NotasDB_"+version;
@@ -20,7 +22,7 @@ public class Config {
 	}
 	//CREATE
 	public String CreateMateria(){
-		Createmateria = "CREATE TABLE IF NOT EXISTS MATERIA(id_materia INTEGER PRIMARY KEY, nombre_materia TEXT)";
+		Createmateria = "CREATE TABLE IF NOT EXISTS MATERIA(id_materia INTEGER PRIMARY KEY, nombre_materia TEXT, codigo_materia TEXT, grupo_materia TEXT )";
 		return Createmateria;
 	}
 	public String CreateApunte(){
@@ -29,7 +31,7 @@ public class Config {
 	}
 	//INSERT
 	public String InsertMateria(){
-		Insertmateria = "INSERT INTO MATERIA(nombre_materia)values";
+		Insertmateria = "INSERT INTO MATERIA(nombre_materia,codigo_materia,grupo_materia)values";
 		return Insertmateria;
 	}
 		public String InsertApunte(){
@@ -38,7 +40,7 @@ public class Config {
 	}
 	//SELECT
 	public String SelectMateria(){
-		Selectmateria = "SELECT nombre_materia FROM MATERIA";
+		Selectmateria = "SELECT nombre_materia,codigo_materia,grupo_materia FROM MATERIA";
 		return Selectmateria;
 	}
 	public String SelectNomMateria(){
@@ -66,5 +68,13 @@ public class Config {
 	public String DeleteTodo(){
 		Deletetodo = "DELETE FROM APUNTE WHERE id_materia = ";
 		return Deletetodo;
+	}
+	public String DeleteTableMateria(){
+		Deletetablemateria = "DELETE FROM MATERIA";
+		return Deletetablemateria;
+	}
+	public String DeleteTableApunte(){
+		Deletetableapunte = "DELETE FROM APUNTE";
+		return Deletetableapunte;
 	}
 }

@@ -206,13 +206,9 @@ public class login extends Metodos implements FieldChangeListener {
             		_claveus = pwd.getText();
             		
             		
-            		try{ 
-            			
-            			
+            		try{ 		
             			URI uri = URI.create(path.Path());
             			Database sqliteDB = DatabaseFactory.open(uri);
-            			
-            			
             			carnet = _login;
             		    code   =_password; 
             		    userufg = _usuario;
@@ -224,9 +220,11 @@ public class login extends Metodos implements FieldChangeListener {
             			token = verificar.validar(userufg, pwdufg);
             			
             				for(int i=0;i<result.getAsignaturaInscrita().length ;i++){	
-            					String devolucion = result.getAsignaturaInscrita()[i].getNombreAsignatura();
+            					String nombre = result.getAsignaturaInscrita()[i].getNombreAsignatura();
+            					String codigo = result.getAsignaturaInscrita()[i].getIdAsignatura();
+            					String grupo = result.getAsignaturaInscrita()[i].getGrupo();
             					//CREA EL STATEMENT PARA GUARDAR POR CADA REPETICION
-            					Statement st1 = sqliteDB.createStatement(statement.InsertMateria()+"('"+ devolucion +"')");
+            					Statement st1 = sqliteDB.createStatement(statement.InsertMateria()+"('"+ nombre +"','"+ codigo +"','" + grupo +"')");
             					st1.prepare();
             					st1.execute();
             					st1.close();

@@ -24,7 +24,7 @@ public class SplashScreen extends MainScreen {
         setTitle((LabelField)null) ; // hide screen title
 
        
-        BitmapField bmp = new BitmapField(Utils.getFitBitmapImage("bg_login2.png",MyApp.g_nScreenWidth, MyApp.g_nScreenHeight),
+        BitmapField bmp = new BitmapField(Utils.getFitBitmapImage("splash.png",320, 240),
         		BitmapField.FIELD_HCENTER | BitmapField.FIELD_VCENTER);  
         
         HorizontalFieldManager rowHolder = new HorizontalFieldManager(NO_HORIZONTAL_SCROLL | NO_VERTICAL_SCROLL|
@@ -88,6 +88,6 @@ public class SplashScreen extends MainScreen {
                 
             }
             //tiempo de duracion del splashscreen y repeticion en falso
-        }, 1000, false);
+        }, 1500, false);
     }
 }
