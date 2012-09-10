@@ -30,6 +30,16 @@ import net.rim.device.api.ui.decor.BackgroundFactory;
 import net.rim.device.api.ui.decor.BorderFactory;
 import estilos.Metodos;
 
+/** try
+{
+	FontFamily ffFont = FontFamily.forName("Comic Sans MS");
+	ffecha = ffFont.getFont(Font.ITALIC, 13);
+	fmateria = ffFont.getFont(Font.ANTIALIAS_DEFAULT, 15);
+	ftitulo = ffFont.getFont(Font.ITALIC, 16); 
+	fapunte = ffFont.getFont(Font.ANTIALIAS_DEFAULT, 17); 
+}catch (ClassNotFoundException e){
+	   System.out.println(e.getMessage());
+}*/
 
 public class notaCrear extends Metodos implements FieldChangeListener {
 	BasicEditField nota;
@@ -41,58 +51,33 @@ public class notaCrear extends Metodos implements FieldChangeListener {
 	int idApunte;
 	int idMateria;
 	DateField fecha;
-
-    /**{
-            public void paint(Graphics g){      
-                g.setColor(Color.WHITE);
-                super.paint(g);
-           }};*/
-	private LabelField materia;
-	private Font ftitulo;
-	private Font ffecha;
-	private Font fmateria;
-	private Font fapunte;
-
+	LabelField materia;
     public notaCrear(int id_materia)
     {   
     	Bitmap bitmapfondo = Bitmap.getBitmapResource("fondoapunte.png");
-    	//Bitmap bitmapHead = Bitmap.getBitmapResource("fondomaterias.png");
 		getMainManager().setBackground(BackgroundFactory.createBitmapBackground(bitmapfondo));
+		idMateria = id_materia;
 		
-    	//getMainManager().setBackground(BackgroundFactory.createLinearGradientBackground(Color.BLACK, Color.BLACK,Color.BLACK,Color.BLACK));
-    	// Bitmap elementoBitmap = Bitmap.getBitmapResource("bg_login.png");
-    	/** try
-         {
-    		FontFamily ffFont = FontFamily.forName("Comic Sans MS");
-         	ffecha = ffFont.getFont(Font.ITALIC, 13);
-         	fmateria = ffFont.getFont(Font.ANTIALIAS_DEFAULT, 15);
-         	ftitulo = ffFont.getFont(Font.ITALIC, 16); 
-         	fapunte = ffFont.getFont(Font.ANTIALIAS_DEFAULT, 17); 
-         }catch (ClassNotFoundException e){
-         	   System.out.println(e.getMessage());
-         }*/
-
-    	idMateria = id_materia;
-    	
-    	    	
-    	
+		//contenedor maestro en el cual estaran inmersos mas contenedores
 		VerticalFieldManager allContent = new VerticalFieldManager(VerticalFieldManager.FIELD_HCENTER);
+		//contenedor de cabecera que van a estar la fecha el nombre de la materia
 		VerticalFieldManager headContent = new VerticalFieldManager(VerticalFieldManager.FIELD_HCENTER);
 		headContent.setMargin(5, 0, 0, 0);
         int iSetTo = 2;
         ocfPrioridad = new ObjectChoiceField("Prioridad: ", choices, iSetTo);
     	setTitle(ocfPrioridad);
-    	
-    	 	SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+    	//formato de la fecha
+    	SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+    	//elemento fecha tipo DateField con el formato anterior
     	 	fecha = new DateField("", System.currentTimeMillis(), dateFormat, Field.FIELD_RIGHT){
+    	 		//pinta el texto de color blanco
                 public void paint(Graphics g){      
                     g.setColor(Color.WHITE);
                     super.paint(g);
                }};;
             fecha.setMargin(5,165,0,0);
-            //fecha.setFont(ffecha);
             headContent.add(fecha);
-            
+        //SELECT nombre de la materia   
         try{
         	URI uri = URI.create(path.Path());
         	Database sqliteDB = DatabaseFactory.open(uri);
@@ -101,7 +86,7 @@ public class notaCrear extends Metodos implements FieldChangeListener {
             Cursor c = se.getCursor();
             Row r;
            
-            
+            //retorna nombre de materia y agrega al head content
             while(c.next()){
                 r = c.getRow();
                 materia = new LabelField(r.getString(0)){
@@ -168,14 +153,7 @@ public class notaCrear extends Metodos implements FieldChangeListener {
             Dialog.alert(e.getMessage().toString());
             e.printStackTrace();
             } 
-        
-        
-        
-        
-        
-        
-      
-        
+        //menuitem utilizado para guardar
     	MenuItem miGuardar = new MenuItem("Guardar" , 100, 1){
     	    public void run(){
     	    	  String textoTitulo = efTitulo.getText();
@@ -186,21 +164,18 @@ public class notaCrear extends Metodos implements FieldChangeListener {
             		  Dialog.alert("Ingrese un titulo para el apunte"); 
             	  }else{
 	    	    	 try{
-	    	    		 
-	    	         	URI uri = URI.create(path.Path());
+	    	    		//se inserta con un statement insertApunte de la clase config con los parametros
+	    	    		//titulo, apunte, prioridad, fecha
+	    	    		URI uri = URI.create(path.Path());
 	    	         	Database sqliteDB = DatabaseFactory.open(uri);
 	    	         	Statement it = sqliteDB.createStatement(statement.InsertApunte()+"("+idMateria+",'"+textoTitulo+"','"+textoApunte+"','"+textoPrioridad+"','"+textoFecha+"')");
 						it.prepare();
 						it.execute();
 						it.close();
-	    	                    
-	    	                  
-						it.close();
 	    	            sqliteDB.close();
+	    	            //se coloca en el campo de titulo y en el campo de apunte "vacio"
 	    	            efTitulo.setText("");
-	    	             efNota.setText(""); 
-	    	       
-	
+	    	            efNota.setText(""); 
 	    	     		Dialog.alert("Guardado con exito");
 	    	         }catch (Exception e){
 	    	         Dialog.alert("error guardar "+e.getMessage().toString());
@@ -209,17 +184,12 @@ public class notaCrear extends Metodos implements FieldChangeListener {
             	  }
     	    }
     	};
-        
+        //agregar el elemento al menu
     	addMenuItem(miGuardar);
-		
-    	
     }
 
 	public void fieldChanged(Field field, int context) {
-		// TODO Auto-generated method stub
-		
-	
-		
+		// TODO Auto-generated method stub	
 	}
 	public boolean onClose() {
 		//force the app to quit
@@ -227,12 +197,11 @@ public class notaCrear extends Metodos implements FieldChangeListener {
 	        transition.setIntAttribute(TransitionContext.ATTR_DURATION, 500);
 	        transition.setIntAttribute(TransitionContext.ATTR_DIRECTION, TransitionContext.DIRECTION_RIGHT);
 	        transition.setIntAttribute(TransitionContext.ATTR_STYLE, TransitionContext.STYLE_PUSH);
-	        
 	        UiEngineInstance engine = Ui.getUiEngineInstance();
 	        engine.setTransition(this, null, UiEngineInstance.TRIGGER_PUSH, transition);
-		
 		openScreen(new notaLista(idMateria));
 		return true;
 	}
 
 }
+

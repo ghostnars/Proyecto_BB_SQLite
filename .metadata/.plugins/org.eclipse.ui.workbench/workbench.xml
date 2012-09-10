@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="14" version="2.0">
+<workbench progressCount="13" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="150" y="180">
 <fastViewData fastViewLocation="1024"/>
@@ -30,11 +30,11 @@
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="1"/>
 <part id="0"/>
-<part id="4"/>
+<part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
 <part id="5"/>
 </presentation>
 </folder>
@@ -42,27 +42,27 @@
 </editorArea>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyApp.java" partName="MyApp.java" path="C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/mypackage/MyApp.java" title="MyApp.java" tooltip="ApuntesUFG/src/mypackage/MyApp.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ApuntesUFG/src/mypackage/MyApp.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="704" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="763" selectionTopPixel="133"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Config.java" partName="Config.java" path="C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/mypackage/Config.java" title="Config.java" tooltip="ApuntesUFG/src/mypackage/Config.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ApuntesUFG/src/mypackage/Config.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="306" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SplashScreen.java" partName="SplashScreen.java" path="C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/mypackage/SplashScreen.java" title="SplashScreen.java" tooltip="ApuntesUFG/src/mypackage/SplashScreen.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ApuntesUFG/src/mypackage/SplashScreen.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2806" selectionTopPixel="735"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="notaLista.java" partName="notaLista.java" path="C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/mypackage/notaLista.java" title="notaLista.java" tooltip="ApuntesUFG/src/mypackage/notaLista.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ApuntesUFG/src/mypackage/notaLista.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1737" selectionTopPixel="510"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="notaCrear.java" partName="notaCrear.java" path="C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/mypackage/notaCrear.java" title="notaCrear.java" tooltip="ApuntesUFG/src/mypackage/notaCrear.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ApuntesUFG/src/mypackage/notaCrear.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="13" selectionOffset="1398" selectionTopPixel="150"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="materiaLista.java" partName="materiaLista.java" path="C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/mypackage/materiaLista.java" title="materiaLista.java" tooltip="ApuntesUFG/src/mypackage/materiaLista.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ApuntesUFG/src/mypackage/materiaLista.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="63" selectionOffset="1327" selectionTopPixel="165"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="45"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="login.java" partName="login.java" path="C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/mypackage/login.java" title="login.java" tooltip="ApuntesUFG/src/mypackage/login.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ApuntesUFG/src/mypackage/login.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="8940" selectionTopPixel="3043"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SplashScreen.java" partName="SplashScreen.java" path="C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/mypackage/SplashScreen.java" title="SplashScreen.java" tooltip="ApuntesUFG/src/mypackage/SplashScreen.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ApuntesUFG/src/mypackage/SplashScreen.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2481" selectionTopPixel="523"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Utils.java" partName="Utils.java" path="C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/estilos/Utils.java" title="Utils.java" tooltip="ApuntesUFG/src/estilos/Utils.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ApuntesUFG/src/estilos/Utils.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="7" selectionOffset="8" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Config.java" partName="Config.java" path="C:/Users/Ghost/Documents/GitHub/Proyecto_BB_SQLite/ApuntesUFG/src/mypackage/Config.java" title="Config.java" tooltip="ApuntesUFG/src/mypackage/Config.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ApuntesUFG/src/mypackage/Config.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="81" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -75,9 +75,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (100 of 151 items)"/>
-<category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Warnings (100 of 261 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -125,7 +123,7 @@
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -246,162 +244,163 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ApuntesUFG/src/mypackage/Config.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ApuntesUFG/src/mypackage/notaLista.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ApuntesUFG/src/mypackage/materiaLista.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ApuntesUFG/src/mypackage/MyApp.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ApuntesUFG/src/mypackage/login.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ApuntesUFG/src/mypackage/notaCrear.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ApuntesUFG/src/mypackage/Config.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ApuntesUFG/src/mypackage/notaModificar.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ApuntesUFG/src/mypackage/SplashScreen.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ApuntesUFG/src/estilos/Utils.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ApuntesUFG/src/mypackage/Config.java"/>
 </editors>
-<item historyLabel="materiaLista.java" index="1">
+<item historyLabel="Config.java" index="3">
+<position info="not_deleted" x="1591" y="0"/>
+</item>
+<item historyLabel="notaLista.java" index="0">
 <position/>
 </item>
-<item historyLabel="Config.java" index="0">
-<position info="not_deleted" x="368" y="0"/>
+<item historyLabel="notaCrear.java" index="2">
+<position info="not_deleted" x="8429" y="0"/>
 </item>
-<item historyLabel="materiaLista.java" index="1">
-<position info="not_deleted" x="3320" y="4"/>
+<item historyLabel="Config.java" index="3">
+<position info="not_deleted" x="1591" y="0"/>
 </item>
-<item historyLabel="login.java" index="3">
+<item historyLabel="notaCrear.java" index="2">
+<position info="not_deleted" x="8429" y="0"/>
+</item>
+<item historyLabel="notaCrear.java" index="2">
+<position/>
+</item>
+<item historyLabel="notaLista.java" index="0">
+<position/>
+</item>
+<item historyLabel="notaCrear.java" index="2">
+<position/>
+</item>
+<item historyLabel="notaLista.java" index="0">
+<position/>
+</item>
+<item historyLabel="notaLista.java" index="0">
+<position/>
+</item>
+<item historyLabel="notaLista.java" index="0">
+<position info="not_deleted" x="4782" y="0"/>
+</item>
+<item historyLabel="notaLista.java" index="0">
 <position/>
 </item>
 <item historyLabel="materiaLista.java" index="1">
+<position info="not_deleted" x="2875" y="0"/>
+</item>
+<item historyLabel="notaLista.java" index="0">
+<position info="not_deleted" x="4091" y="0"/>
+</item>
+<item historyLabel="notaLista.java" index="0">
+<position info="not_deleted" x="5022" y="0"/>
+</item>
+<item historyLabel="notaLista.java" index="0">
+<position info="not_deleted" x="2804" y="9"/>
+</item>
+<item historyLabel="notaLista.java" index="0">
+<position info="not_deleted" x="4989" y="0"/>
+</item>
+<item historyLabel="notaLista.java" index="0">
+<position info="not_deleted" x="4623" y="0"/>
+</item>
+<item historyLabel="notaLista.java" index="0">
 <position/>
+</item>
+<item historyLabel="notaCrear.java" index="2">
+<position/>
+</item>
+<item historyLabel="notaModificar.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="materiaLista.java" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="notaCrear.java" index="2">
+<position info="not_deleted" x="2440" y="0"/>
+</item>
+<item historyLabel="notaCrear.java" index="2">
 <position/>
 </item>
-<item historyLabel="Config.java" index="0">
+<item historyLabel="notaCrear.java" index="2">
+<position info="not_deleted" x="2397" y="0"/>
+</item>
+<item historyLabel="notaCrear.java" index="2">
+<position info="not_deleted" x="2403" y="0"/>
+</item>
+<item historyLabel="notaModificar.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Config.java" index="3">
+<position info="not_deleted" x="1591" y="0"/>
+</item>
+<item historyLabel="notaModificar.java" index="4">
+<position/>
+</item>
+<item historyLabel="notaLista.java" index="0">
+<position/>
+</item>
+<item historyLabel="notaModificar.java" index="4">
+<position info="not_deleted" x="2259" y="1"/>
+</item>
+<item historyLabel="notaLista.java" index="0">
+<position/>
+</item>
+<item historyLabel="notaLista.java" index="0">
+<position/>
+</item>
+<item historyLabel="notaLista.java" index="0">
+<position/>
+</item>
+<item historyLabel="notaCrear.java" index="2">
+<position info="not_deleted" x="2403" y="0"/>
+</item>
+<item historyLabel="notaLista.java" index="0">
+<position/>
+</item>
+<item historyLabel="notaLista.java" index="0">
+<position info="not_deleted" x="4271" y="0"/>
+</item>
+<item historyLabel="notaCrear.java" index="2">
+<position info="not_deleted" x="2403" y="0"/>
+</item>
+<item historyLabel="notaLista.java" index="0">
+<position info="not_deleted" x="4375" y="0"/>
+</item>
+<item historyLabel="notaLista.java" index="0">
+<position info="not_deleted" x="4393" y="0"/>
+</item>
+<item historyLabel="notaLista.java" index="0">
+<position/>
+</item>
+<item historyLabel="SplashScreen.java" index="5">
+<position info="not_deleted" x="2806" y="0"/>
+</item>
+<item historyLabel="notaCrear.java" index="2">
+<position info="not_deleted" x="1398" y="13"/>
+</item>
+<item historyLabel="materiaLista.java" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="notaLista.java" index="0">
+<position info="not_deleted" x="2130" y="0"/>
+</item>
+<item historyLabel="notaLista.java" index="0">
+<position info="not_deleted" x="4387" y="0"/>
+</item>
+<item historyLabel="Config.java" index="6">
+<position info="not_deleted" x="2225" y="0"/>
+</item>
+<item historyLabel="Config.java" index="6">
 <position info="not_deleted" x="81" y="0"/>
 </item>
-<item historyLabel="materiaLista.java" index="1">
-<position/>
+<item historyLabel="notaLista.java" index="0">
+<position info="not_deleted" x="1737" y="0"/>
 </item>
-<item historyLabel="login.java" index="3">
-<position info="not_deleted" x="9897" y="0"/>
-</item>
-<item historyLabel="login.java" index="3">
-<position/>
-</item>
-<item historyLabel="Config.java" index="0">
+<item active="true" historyLabel="Config.java" index="6">
 <position info="not_deleted" x="81" y="0"/>
-</item>
-<item historyLabel="MyApp.java" index="2">
-<position info="not_deleted" x="704" y="10"/>
-</item>
-<item historyLabel="login.java" index="3">
-<position/>
-</item>
-<item historyLabel="login.java" index="3">
-<position info="not_deleted" x="9559" y="0"/>
-</item>
-<item historyLabel="Config.java" index="0">
-<position info="not_deleted" x="736" y="0"/>
-</item>
-<item historyLabel="materiaLista.java" index="1">
-<position/>
-</item>
-<item historyLabel="login.java" index="3">
-<position info="not_deleted" x="8940" y="0"/>
-</item>
-<item historyLabel="Config.java" index="0">
-<position info="not_deleted" x="20" y="0"/>
-</item>
-<item historyLabel="materiaLista.java" index="1">
-<position/>
-</item>
-<item historyLabel="login.java" index="3">
-<position info="not_deleted" x="8940" y="0"/>
-</item>
-<item historyLabel="Config.java" index="0">
-<position info="not_deleted" x="560" y="0"/>
-</item>
-<item historyLabel="login.java" index="3">
-<position info="not_deleted" x="8940" y="0"/>
-</item>
-<item historyLabel="materiaLista.java" index="1">
-<position/>
-</item>
-<item historyLabel="materiaLista.java" index="1">
-<position info="not_deleted" x="3692" y="0"/>
-</item>
-<item historyLabel="Config.java" index="0">
-<position info="not_deleted" x="368" y="0"/>
-</item>
-<item historyLabel="Utils.java" index="5">
-<position info="not_deleted" x="8" y="7"/>
-</item>
-<item historyLabel="login.java" index="3">
-<position info="not_deleted" x="8940" y="0"/>
-</item>
-<item historyLabel="MyApp.java" index="2">
-<position info="not_deleted" x="1705" y="0"/>
-</item>
-<item historyLabel="SplashScreen.java" index="4">
-<position/>
-</item>
-<item historyLabel="materiaLista.java" index="1">
-<position info="not_deleted" x="3666" y="0"/>
-</item>
-<item historyLabel="Config.java" index="0">
-<position info="not_deleted" x="635" y="0"/>
-</item>
-<item historyLabel="materiaLista.java" index="1">
-<position info="not_deleted" x="3728" y="20"/>
-</item>
-<item historyLabel="materiaLista.java" index="1">
-<position info="not_deleted" x="3727" y="0"/>
-</item>
-<item historyLabel="MyApp.java" index="2">
-<position info="not_deleted" x="1705" y="0"/>
-</item>
-<item historyLabel="SplashScreen.java" index="4">
-<position/>
-</item>
-<item historyLabel="materiaLista.java" index="1">
-<position info="not_deleted" x="1739" y="442"/>
-</item>
-<item historyLabel="SplashScreen.java" index="4">
-<position/>
-</item>
-<item historyLabel="materiaLista.java" index="1">
-<position info="not_deleted" x="3197" y="710"/>
-</item>
-<item historyLabel="SplashScreen.java" index="4">
-<position/>
-</item>
-<item historyLabel="materiaLista.java" index="1">
-<position info="not_deleted" x="1327" y="63"/>
-</item>
-<item historyLabel="SplashScreen.java" index="4">
-<position info="not_deleted" x="2137" y="0"/>
-</item>
-<item historyLabel="SplashScreen.java" index="4">
-<position info="not_deleted" x="2325" y="0"/>
-</item>
-<item historyLabel="MyApp.java" index="2">
-<position info="not_deleted" x="799" y="0"/>
-</item>
-<item historyLabel="Config.java" index="0">
-<position/>
-</item>
-<item historyLabel="MyApp.java" index="2">
-<position info="not_deleted" x="704" y="10"/>
-</item>
-<item historyLabel="SplashScreen.java" index="4">
-<position info="not_deleted" x="2325" y="0"/>
-</item>
-<item historyLabel="SplashScreen.java" index="4">
-<position info="not_deleted" x="956" y="0"/>
-</item>
-<item historyLabel="MyApp.java" index="2">
-<position info="not_deleted" x="704" y="10"/>
-</item>
-<item historyLabel="Config.java" index="0">
-<position info="not_deleted" x="306" y="0"/>
-</item>
-<item active="true" historyLabel="SplashScreen.java" index="4">
-<position info="not_deleted" x="956" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -409,12 +408,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="left"/>
-</trimArea>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="right"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -422,16 +415,36 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Utils.java" tooltip="ApuntesUFG/src/estilos/Utils.java">
-<persistable path="/ApuntesUFG/src/estilos/Utils.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Config.java" tooltip="ApuntesUFG/src/mypackage/Config.java">
+<persistable path="/ApuntesUFG/src/mypackage/Config.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="materiaLista.java" tooltip="ApuntesUFG/src/mypackage/materiaLista.java">
+<persistable path="/ApuntesUFG/src/mypackage/materiaLista.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="notaModificar.java" tooltip="ApuntesUFG/src/mypackage/notaModificar.java">
+<persistable path="/ApuntesUFG/src/mypackage/notaModificar.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="notaCrear.java" tooltip="ApuntesUFG/src/mypackage/notaCrear.java">
+<persistable path="/ApuntesUFG/src/mypackage/notaCrear.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="notaLista.java" tooltip="ApuntesUFG/src/mypackage/notaLista.java">
+<persistable path="/ApuntesUFG/src/mypackage/notaLista.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SplashScreen.java" tooltip="ApuntesUFG/src/mypackage/SplashScreen.java">
 <persistable path="/ApuntesUFG/src/mypackage/SplashScreen.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyApp.java" tooltip="ApuntesUFG/src/mypackage/MyApp.java">
+<persistable path="/ApuntesUFG/src/mypackage/MyApp.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="net.rim.ejde.BlackBerryProjectFormEditor" name="BlackBerry_App_Descriptor.xml" tooltip="ApuntesUFG/BlackBerry_App_Descriptor.xml">
+<persistable path="/ApuntesUFG/BlackBerry_App_Descriptor.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Utils.java" tooltip="ApuntesUFG/src/estilos/Utils.java">
+<persistable path="/ApuntesUFG/src/estilos/Utils.java"/>
 </file>
 <file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Statement.class" tooltip="net.rim.device.api.database.Statement">
 <persistable org.eclipse.jdt.ui.ClassFileIdentifier="=ApuntesUFG/C:\/EclipseB\/plugins\/net.rim.ejde.componentpack6.0.0_6.0.0.43\/components\/lib\/net_rim_api.jar&lt;net.rim.device.api.database(Statement.class"/>
@@ -439,26 +452,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="login.java" tooltip="ApuntesUFG/src/mypackage/login.java">
 <persistable path="/ApuntesUFG/src/mypackage/login.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="materiaLista.java" tooltip="ApuntesUFG/src/mypackage/materiaLista.java">
-<persistable path="/ApuntesUFG/src/mypackage/materiaLista.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Config.java" tooltip="ApuntesUFG/src/mypackage/Config.java">
-<persistable path="/ApuntesUFG/src/mypackage/Config.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="net.rim.ejde.BlackBerryProjectFormEditor" name="BlackBerry_App_Descriptor.xml" tooltip="ApuntesUFG/BlackBerry_App_Descriptor.xml">
-<persistable path="/ApuntesUFG/BlackBerry_App_Descriptor.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="notaLista.java" tooltip="ApuntesUFG/src/mypackage/notaLista.java">
-<persistable path="/ApuntesUFG/src/mypackage/notaLista.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="notaModificar.java" tooltip="ApuntesUFG/src/mypackage/notaModificar.java">
-<persistable path="/ApuntesUFG/src/mypackage/notaModificar.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Metodos.java" tooltip="ApuntesUFG/src/estilos/Metodos.java">
 <persistable path="/ApuntesUFG/src/estilos/Metodos.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="notaCrear.java" tooltip="ApuntesUFG/src/mypackage/notaCrear.java">
-<persistable path="/ApuntesUFG/src/mypackage/notaCrear.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MemoMainScreen.java" tooltip="MemoAPIDemo/src/com/rim/samples/device/memoapidemo/MemoMainScreen.java">
 <persistable path="/MemoAPIDemo/src/com/rim/samples/device/memoapidemo/MemoMainScreen.java"/>
@@ -468,9 +463,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MemoListListener.java" tooltip="MemoAPIDemo/src/com/rim/samples/device/memoapidemo/MemoListListener.java">
 <persistable path="/MemoAPIDemo/src/com/rim/samples/device/memoapidemo/MemoListListener.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MemoController.java" tooltip="MemoAPIDemo/src/com/rim/samples/device/memoapidemo/MemoController.java">
-<persistable path="/MemoAPIDemo/src/com/rim/samples/device/memoapidemo/MemoController.java"/>
 </file>
 </mruList>
 </workbench>

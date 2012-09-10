@@ -18,6 +18,7 @@ public class MyApp extends UiApplication
      * Entry point for application
      * @param args Command line arguments (not used)
      */ 
+	//Instancias de Config,java Clase que contiene los parametros SQL y la version de la base de datos
 	Config path = new Config();
 	Config statement = new Config();
 	static MainScreen splashScreen = null, homeScreen = null, homeScreen1 = null;
@@ -37,23 +38,32 @@ public class MyApp extends UiApplication
     public MyApp()
     {               
     	
-    	 try{
-    	     	URI uri = URI.create(path.Path());
-    	     	Database sqliteDB = DatabaseFactory.create(uri);
-
-    	     	Statement st = sqliteDB.createStatement(statement.CreateMateria());
-    				st.prepare();
-    				st.execute();
-    				st.close();
-    				
-    				Statement ct = sqliteDB.createStatement(statement.CreateApunte());
-    				ct.prepare();
-    				ct.execute();
-    				ct.close();
-    				sqliteDB.close();
-    	     }catch (Exception e){
-    	     e.printStackTrace();
-    	     }  
+    //Al iniciar la aplicacion comienza creando la base de datos y las tablas
+    	 
+	 try{	
+		 //URI es la direccion en donde se va a crear la base de datos
+		 //Estos parametros estan en Config.java que contiene estos parametros
+	     	URI uri = URI.create(path.Path());
+	     //sqliteDB variable tipo Database
+	     	Database sqliteDB = DatabaseFactory.create(uri);
+	     		//Statement st utilizado para crear las sentencias SQL
+		     	Statement st = sqliteDB.createStatement(statement.CreateMateria());
+				//se prepara la sentencia st a ser ejecutada
+		     	st.prepare();
+		     	//Ejecuta la sentencia en este caseo CreateMateria() que en config.java es crear la tabla materia
+				st.execute();
+				//Cierra la sentencia
+				st.close();
+				
+				Statement ct = sqliteDB.createStatement(statement.CreateApunte());
+				ct.prepare();
+				ct.execute();
+				ct.close();
+				//Cierra la base de datos "si no permanece abierta hasta que se cierre generando errores"
+				sqliteDB.close();
+	     }catch (Exception e){
+	     e.printStackTrace();
+	     }  
     	
     	
     	

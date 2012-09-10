@@ -31,17 +31,26 @@ public class SplashScreen extends MainScreen {
                 Field.FIELD_HCENTER | USE_ALL_HEIGHT );
         rowHolder.add(bmp);
         add(rowHolder);
+        /*
+         * Se hace el SELECT en splashscreen para poder ver si existen materias ya guardadas
+         * en base de datos y elige que pantalla se va a abrir,
+         * si hay datos abre materiaLista.java y si no hay nada en la base
+         * lo abre login el cual utiliza el webservice para llenar la lista de materias
+         *
+         */
         
     	try{
         	URI uri = URI.create(path.Path());
         	Database sqliteDB = DatabaseFactory.open(uri);
             Statement se = sqliteDB.createStatement(statement.SelectMateria());
                 se.prepare();
+                //c tipo Cursor que devuelve un arreglo de registros
                 Cursor c = se.getCursor();
                 	
                 Row r;
                 
                 int i = 0;
+                //mientras c se mueva a la siguiente fila entra e incrementa i + 1
                 while(c.next()) 
                 {
                     r = c.getRow();
@@ -49,7 +58,7 @@ public class SplashScreen extends MainScreen {
                   i++;
                     }
                     sqliteDB.close();
-            		
+            		//si i no incremento en nada var toma el valor de uno
                     if (i==0)
                     {
                     	var =1;
@@ -64,16 +73,21 @@ public class SplashScreen extends MainScreen {
         MyApp.homeScreen = new materiaLista();
         MyApp.homeScreen1 = new login();
         UiApplication.getUiApplication().invokeLater(new Runnable() {
+        	
             public void run() {
+            	//si var es igual a uno dirige a homescreen1 que en este caso es login
             	if(var == 1){
             	UiApplication.getUiApplication().pushScreen(MyApp.homeScreen1);
-                UiApplication.getUiApplication().popScreen(MyApp.splashScreen);	
+                UiApplication.getUiApplication().popScreen(MyApp.splashScreen);
+                //si var no trae uno entonces es porque trae datos que "la base de datos ha sido creada"
+                //y apunta a materia lista.
             	}else{
             	UiApplication.getUiApplication().pushScreen(MyApp.homeScreen);
                 UiApplication.getUiApplication().popScreen(MyApp.splashScreen);		
             	}
                 
             }
+            //tiempo de duracion del splashscreen y repeticion en falso
         }, 1000, false);
     }
 }

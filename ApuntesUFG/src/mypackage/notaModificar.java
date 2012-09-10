@@ -198,7 +198,7 @@ public class notaModificar extends Metodos implements FieldChangeListener {
         	  }else{
 		          try
 		          {         
-		              // Update the record in the DirectoryItems table for the given id
+		              //La base de datos ha sido actualizada! con el metodo updateApunte por medio de bind
 		        	  URI uri1 = URI.create(path.Path());
 		          	  Database sqliteDB1 = DatabaseFactory.open(uri1);
 		              Statement exe = sqliteDB1.createStatement(statement.UpdateApunte()); 
@@ -224,46 +224,38 @@ public class notaModificar extends Metodos implements FieldChangeListener {
     	};
         
     	
+    //Elemento eliminar el cual puede eliminar el apunte en pantalla	
+	MenuItem menuEliminar = new MenuItem("Eliminar Apunte" , 100, 2){
+	    public void run(){
+	    	UiApplication.getUiApplication().invokeLater(new Runnable(){
+	    		public void run(){
+					Object[] choices = new Object[] {"Cancelar", "Eliminar" };
+					int result = Dialog.ask("Desea eliminar?", choices, 0);
+					switch (result) {
+					case 0:
+						break;
+					case 1:
+						try{ 
+				         	URI uri1 = URI.create(path.Path());
+				         	Database sqliteDB1 = DatabaseFactory.open(uri1);
+				         	Statement st = sqliteDB1.createStatement(statement.DeleteApunte()+idApunte);
+				            st.prepare();
+				            st.execute();
+				            st.close();
+				            sqliteDB1.close();
+				            Dialog.alert("Eliminado");
+				         }catch (Exception e){
+				         Dialog.alert("Error al eliminar "+e.getMessage().toString());
+				         e.printStackTrace();
+				         	}
+						openScreen(new notaLista(idMateria));
+						break;
+					}				
+		}});
+	  }
+	};
     	
-    	MenuItem menuEliminar = new MenuItem("Eliminar Apunte" , 100, 2){
-    	    public void run(){
-    	    	
-    	      
-    	    	UiApplication.getUiApplication().invokeLater(new Runnable(){
-			public void run(){
-
-				Object[] choices = new Object[] {"Cancelar", "Eliminar" };
-				int result = Dialog.ask("Desea eliminar?", choices, 0);
-
-				switch (result) {
-				case 0:
-					break;
-				case 1:
-					try{
-	    	    		 
-	    	    		 
-    		         	URI uri1 = URI.create(path.Path());
-    		         	Database sqliteDB1 = DatabaseFactory.open(uri1);
-    		         	Statement st = sqliteDB1.createStatement(statement.DeleteApunte()+idApunte);
-    		            st.prepare();
-    		            st.execute();
-    		            st.close();
-    		            sqliteDB1.close();
-    		            Dialog.alert("Eliminado");
-    		         }catch (Exception e){
-    		         Dialog.alert("Error al eliminar "+e.getMessage().toString());
-    		         e.printStackTrace();
-    		         }
-					openScreen(new notaLista(idMateria));
-					break;
-				}				
-			}});
-
-    	  
-    	         }
-    	};
-    	
-    	
+    	//Agrega los dos elementos al menu
     	addMenuItem(miGuardar);
 		addMenuItem(menuEliminar);
 
