@@ -1,14 +1,14 @@
-RIM-COD-SHA1-4: e6 1f 2f 01 66 f6 69 e8 c8 cf e8 60 f6 0c f3 d6 2b 64 fd 83
-RIM-COD-SHA1-3: ce 2b b3 87 1c 6e 64 59 9f 67 c2 5d 7e ff bc 5b be 1c 0c 81
-RIM-COD-SHA1-2: 17 44 4d 51 73 cd 7b 0d 38 07 c7 2d 34 48 24 bd 0e 8c db 07
-RIM-COD-SHA1-1: e6 3b e8 dd 51 c6 3b 36 f1 cf aa 97 04 b3 f6 c0 c2 ed 52 01
+RIM-COD-SHA1-4: 35 f1 59 20 d8 67 98 f8 f8 b9 6e 78 10 eb 8a 4e a9 df 4e 94
+RIM-COD-SHA1-3: b0 7c 32 ed 18 a0 3a 82 23 d9 19 9d e3 e1 2e 47 f2 aa 57 ad
+RIM-COD-SHA1-2: a0 a0 75 0f 32 3a 69 e5 05 35 60 8f 56 1b 5e a8 81 7b 84 fc
+RIM-COD-SHA1-1: 40 a7 f6 70 04 1c e5 4c e2 a4 d1 fa 69 ea 8e 45 6c 03 f1 85
 RIM-MIDlet-Flags-1: 0
-MIDlet-Jar-Size: 649429
+MIDlet-Jar-Size: 649333
 MIDlet-Name: ApuntesUFG
 MIDlet-Jar-URL: ApuntesUFG.jar
 MicroEdition-Configuration: CLDC-1.1
 MIDlet-Description: Apuntes Ufg
-RIM-MIDlet-Position-1: 2
+RIM-MIDlet-Position-1: 1
 RIM-COD-URL-6: ApunteUFG-6.cod
 RIM-COD-Module-Dependencies: net_rim_cldc,net_rim_jaxrpc,net_rim_database,net_rim_os
 RIM-COD-URL-5: ApunteUFG-5.cod
@@ -16,7 +16,7 @@ RIM-COD-URL-4: ApunteUFG-4.cod
 RIM-COD-URL-3: ApunteUFG-3.cod
 RIM-COD-URL-2: ApunteUFG-2.cod
 RIM-COD-URL-1: ApunteUFG-1.cod
-RIM-COD-Size-6: 67172
+RIM-COD-Size-6: 67200
 RIM-COD-Size-5: 42920
 RIM-COD-Size-4: 54956
 RIM-COD-Size-3: 46636
@@ -24,8 +24,8 @@ RIM-COD-Module-Name: ApunteUFG
 RIM-COD-Size-2: 50424
 RIM-COD-Size-1: 50448
 RIM-MIDlet-Icon-Count-1: 1
-RIM-COD-SHA1: bf c8 64 f7 c2 2b 7d 65 f2 52 69 ac 84 58 78 35 ef 97 12 80
-RIM-COD-Size: 72160
+RIM-COD-SHA1: c5 b1 69 6e 69 1c 35 d0 b2 82 c1 13 e9 89 2e f1 87 03 20 4e
+RIM-COD-Size: 72132
 MicroEdition-Profile: MIDP-2.0
 RIM-MIDlet-Icon-1-1: img/icon.png,focused
 MIDlet-Vendor: IMOVES
@@ -33,6 +33,6 @@ MIDlet-1: ApuntesUFG,img/icon1.png,
 RIM-COD-URL: ApunteUFG.cod
 Manifest-Version: 1.0
 MIDlet-Version: 1.1
-RIM-COD-SHA1-6: 7f 3b 3d e8 ee 07 e3 36 09 a4 17 83 6d 1b b0 6e 0b 62 d3 c5
-RIM-COD-Creation-Time: 1347030386
-RIM-COD-SHA1-5: 5d 08 78 a2 85 b4 19 10 ff 54 5a 3f 00 96 fb 8f b4 e1 1c e3
+RIM-COD-SHA1-6: 0a 2d 38 7c 24 57 24 22 f9 de c6 a9 82 3b da c6 5b b1 33 9b
+RIM-COD-Creation-Time: 1347259867
+RIM-COD-SHA1-5: c0 56 16 f9 6e 52 93 a3 9e e8 01 b7 e2 fe dd 5d 56 49 83 18

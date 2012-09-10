@@ -134,9 +134,9 @@ public class notaLista extends Metodos implements FieldChangeListener {
                  
        
                if(i==0){
-                WLabelField nohay = new WLabelField("No hay ninguna nota aun!\n\n"
-                 +"Para crear una nota \n\n"
-                 +"precione menú y eliga \n\n"
+                LabelField nohay = new LabelField("No hay ninguna nota aun!\n\n"
+                 +"Para crear una nota \n"
+                 +"precione menú y eliga \n"
                  +"'Nuevo Apunte'");
                  
                 	 nohay.setMargin(39,0,0,65);
