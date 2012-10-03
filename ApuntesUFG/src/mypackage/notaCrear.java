@@ -62,7 +62,7 @@ public class notaCrear extends Metodos implements FieldChangeListener {
 		VerticalFieldManager allContent = new VerticalFieldManager(VerticalFieldManager.FIELD_HCENTER);
 		//contenedor de cabecera que van a estar la fecha el nombre de la materia
 		VerticalFieldManager headContent = new VerticalFieldManager(VerticalFieldManager.FIELD_HCENTER);
-		headContent.setMargin(5, 0, 0, 0);
+		headContent.setMargin(5, 5, 0, 5 );
         int iSetTo = 2;
         ocfPrioridad = new ObjectChoiceField("Prioridad: ", choices, iSetTo);
     	setTitle(ocfPrioridad);
@@ -77,7 +77,7 @@ public class notaCrear extends Metodos implements FieldChangeListener {
                }};;
             fecha.setMargin(5,165,0,0);
             headContent.add(fecha);
-        //SELECT nombre de la materia   
+        //SELECT nombre de la materia
         try{
         	URI uri = URI.create(path.Path());
         	Database sqliteDB = DatabaseFactory.open(uri);

@@ -16,7 +16,8 @@
 <stringAttribute key="attr.general.numberOfSecondsToWaitBeforeResponse" value="0"/>
 <stringAttribute key="attr.general.pin" value="0x2100000A"/>
 <stringAttribute key="attr.general.simulatorDir" value="C:\Program Files\Research In Motion\BlackBerry Smartphone Simulators 6.0.0\6.0.0.723 (9300)"/>
-<intAttribute key="attr.jre.type" value="0"/>
+<stringAttribute key="attr.jre.id" value="BlackBerry JRE 6.0.0"/>
+<intAttribute key="attr.jre.type" value="1"/>
 <stringAttribute key="attr.memory.appHeapSize" value=""/>
 <stringAttribute key="attr.memory.brandingData" value=""/>
 <booleanAttribute key="attr.memory.destroyExistingSDImage" value="false"/>
@@ -47,7 +48,7 @@
 <stringAttribute key="attr.ports.bluetooth.port" value=""/>
 <booleanAttribute key="attr.ports.usbCableConnected" value="false"/>
 <listAttribute key="attr.projects.deployedProjects">
-<listEntry value="ApuntesUFG"/>
+<listEntry value="PromoApp"/>
 </listAttribute>
 <booleanAttribute key="attr.view.disableAutoBacklightShutOff" value="false"/>
 <booleanAttribute key="attr.view.displayLCDOnly" value="false"/>

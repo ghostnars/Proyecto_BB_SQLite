@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;mypackage.login&apos; to &apos;Registro&apos;&#x0D;&#x0A;- Original project: &apos;PromoApp&apos;&#x0D;&#x0A;- Original element: &apos;mypackage.login&apos;&#x0D;&#x0A;- Renamed element: &apos;mypackage.Registro&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;login&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;mypackage{login.java[login" matchStrategy="1" name="Registro" qualified="false" references="true" similarDeclarations="false" stamp="1348672967795" textual="false" version="1.0"/>
+</session>

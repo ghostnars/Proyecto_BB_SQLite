@@ -61,8 +61,7 @@ public class SplashScreen extends MainScreen {
             		//si i no incremento en nada var toma el valor de uno
                     if (i==0)
                     {
-                    	var =1;
-                		
+                    	var =1;                		
                     }
                    
             }catch (Exception e){

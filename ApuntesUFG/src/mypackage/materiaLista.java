@@ -48,7 +48,7 @@ public class materiaLista extends Metodos implements FieldChangeListener {
     	 try
     	 {
     	 	FontFamily ffFont = FontFamily.forName("Arial");
-    	 	ffecha = ffFont.getFont(Font.ANTIALIAS_DEFAULT, 13);
+    	 	ffecha = ffFont.getFont(Font.ANTIALIAS_STANDARD, 13);
     	 	
     	 }catch (ClassNotFoundException e){
     	 	   System.out.println(e.getMessage());

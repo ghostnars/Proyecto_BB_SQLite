@@ -1,6 +1,5 @@
 package mypackage;
 
-import ws.WsMovilSoap_Stub;
 import net.rim.device.api.database.Database;
 import net.rim.device.api.database.DatabaseFactory;
 import net.rim.device.api.database.Statement;
@@ -25,6 +24,7 @@ import net.rim.device.api.ui.container.HorizontalFieldManager;
 import net.rim.device.api.ui.container.VerticalFieldManager;
 import net.rim.device.api.ui.decor.BackgroundFactory;
 import net.rim.device.api.ui.decor.BorderFactory;
+import ws.WsMovilSoap_Stub;
 
 import com.twmacinta.util.Autenticacion;
 
@@ -148,9 +148,14 @@ public class login extends Metodos implements FieldChangeListener {
 		boton.setMargin(5,0,11,90);
 		fondo.add(boton);
       	add(fondo);
+      	
+      
+
 
 		
 	}
+	
+	
 
 	public void fieldChanged(Field field, int context) {
 	if ( boton == field){
@@ -244,3 +249,4 @@ public class login extends Metodos implements FieldChangeListener {
 
 	
 }
+
