@@ -17,6 +17,7 @@ import net.rim.device.api.ui.Graphics;
 import net.rim.device.api.ui.MenuItem;
 import net.rim.device.api.ui.TransitionContext;
 import net.rim.device.api.ui.Ui;
+import net.rim.device.api.ui.UiApplication;
 import net.rim.device.api.ui.UiEngineInstance;
 import net.rim.device.api.ui.XYEdges;
 import net.rim.device.api.ui.component.BasicEditField;
@@ -52,6 +53,11 @@ public class notaCrear extends Metodos implements FieldChangeListener {
 	int idMateria;
 	DateField fecha;
 	LabelField materia;
+	boolean guardado = false;
+	  String textoTitulo;
+      String textoApunte;
+      String textoPrioridad;
+      String textoFecha;
     public notaCrear(int id_materia)
     {   
     	Bitmap bitmapfondo = Bitmap.getBitmapResource("fondoapunte.png");
@@ -156,14 +162,15 @@ public class notaCrear extends Metodos implements FieldChangeListener {
         //menuitem utilizado para guardar
     	MenuItem miGuardar = new MenuItem("Guardar" , 100, 1){
     	    public void run(){
-    	    	  String textoTitulo = efTitulo.getText();
-    	          String textoApunte = efNota.getText();
-    	          String textoPrioridad = (String) ocfPrioridad.getChoice(ocfPrioridad.getSelectedIndex());
-    	          String textoFecha = fecha.toString();
+    	    	  textoTitulo = efTitulo.getText();
+    	          textoApunte = efNota.getText();
+    	          textoPrioridad = (String) ocfPrioridad.getChoice(ocfPrioridad.getSelectedIndex());
+    	          textoFecha = fecha.toString();
     	          if(textoTitulo.length()==0){
             		  Dialog.alert("Ingrese un titulo para el apunte"); 
             	  }else{
 	    	    	 try{
+	    	    		 guardado = true;
 	    	    		//se inserta con un statement insertApunte de la clase config con los parametros
 	    	    		//titulo, apunte, prioridad, fecha
 	    	    		URI uri = URI.create(path.Path());
@@ -176,10 +183,12 @@ public class notaCrear extends Metodos implements FieldChangeListener {
 	    	            //se coloca en el campo de titulo y en el campo de apunte "vacio"
 	    	            efTitulo.setText("");
 	    	            efNota.setText(""); 
+	    	            
 	    	     		Dialog.alert("Guardado con exito");
 	    	         }catch (Exception e){
 	    	         Dialog.alert("error guardar "+e.getMessage().toString());
 	    	         e.printStackTrace();
+	    	         guardado = false;
 	    	         }
             	  }
     	    }
@@ -193,13 +202,57 @@ public class notaCrear extends Metodos implements FieldChangeListener {
 	}
 	public boolean onClose() {
 		//force the app to quit
+		if(efTitulo.getText().length()==0){
+			guardado = true;
+		}
+		if(guardado == true){
 		 TransitionContext transition = new TransitionContext(TransitionContext.TRANSITION_SLIDE);
 	        transition.setIntAttribute(TransitionContext.ATTR_DURATION, 500);
 	        transition.setIntAttribute(TransitionContext.ATTR_DIRECTION, TransitionContext.DIRECTION_RIGHT);
 	        transition.setIntAttribute(TransitionContext.ATTR_STYLE, TransitionContext.STYLE_PUSH);
 	        UiEngineInstance engine = Ui.getUiEngineInstance();
 	        engine.setTransition(this, null, UiEngineInstance.TRIGGER_PUSH, transition);
-		openScreen(new notaLista(idMateria));
+		openScreen(new notaLista(idMateria));		
+		}else{
+			UiApplication.getUiApplication().invokeLater(new Runnable(){
+				public void run(){
+
+					Object[] choices = new Object[] {"Guardar", "No Guardar" };
+					int result = Dialog.ask("Todavía no ha guardado nada?", choices, 0);
+					//por medio de case se elige por numero de posicion del array de choices
+					switch (result) {
+					//si la eleccion es 0 Guarda los datos
+					case 0:
+						textoTitulo = efTitulo.getText();
+		    	          textoApunte = efNota.getText();
+		    	          textoPrioridad = (String) ocfPrioridad.getChoice(ocfPrioridad.getSelectedIndex());
+		    	          textoFecha = fecha.toString();
+		    	          if(textoTitulo.length()==0){
+		            		  Dialog.alert("Ingrese un titulo para el apunte"); 
+		            	  }else{
+						try{
+		    	    		URI uri = URI.create(path.Path());
+		    	         	Database sqliteDB = DatabaseFactory.open(uri);
+		    	         	Statement it = sqliteDB.createStatement(statement.InsertApunte()+"("+idMateria+",'"+textoTitulo+"','"+textoApunte+"','"+textoPrioridad+"','"+textoFecha+"')");
+							it.prepare();
+							it.execute();
+							it.close();
+		    	            sqliteDB.close();
+		    	         }catch (Exception e){
+		    	         Dialog.alert("error guardar "+e.getMessage().toString());
+		    	         e.printStackTrace();
+		    	         }finally{
+		    	        	 openScreen(new notaLista(idMateria));
+		    	         }
+		            	  }
+						break;
+					case 1:
+					//si la eleccion es 1 entonces procede eliminar la lista de apuntes por idMateria	
+						openScreen(new notaLista(idMateria));
+						break;
+					}				
+				}});
+		}
 		return true;
 	}
 

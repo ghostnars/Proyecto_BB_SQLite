@@ -15,19 +15,9 @@
 		<copyright >
 			Copyright (c) 2012 IMOVES
 		</copyright>
-		<fileset Java="1.55" _blackberryVersion="[5.0.0,5.0.1)">
+		<fileset Java="1.55" _blackberryVersion="[5.0.0)">
 			<directory >
 				5.0.0
-			</directory>
-			<files >
-				ApunteUFG.cod
-
-			</files>
-
-		</fileset>
-		<fileset Java="1.55" _blackberryVersion="[6.0.0)">
-			<directory >
-				6.0.0
 			</directory>
 			<files >
 				ApunteUFG.cod

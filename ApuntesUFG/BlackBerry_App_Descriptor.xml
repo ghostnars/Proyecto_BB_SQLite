@@ -2,11 +2,11 @@
 
 <Properties ModelVersion="1.1.2">
   <General Title="ApuntesUFG" Version="1.1" Vendor="IMOVES" Description="Apuntes Ufg"/>
-  <Application Type="BlackBerry Application" MainMIDletName="" MainArgs="" HomeScreenPosition="1" StartupTier="7" IsSystemModule="false" IsAutostartup="false"/>
+  <Application Type="BlackBerry Application" MainMIDletName="" MainArgs="" HomeScreenPosition="1" StartupTier="6" IsSystemModule="false" IsAutostartup="true"/>
   <Resources hasTitleResource="false" TitleResourceBundleName="" TitleResourceBundleRelativePath="" TitleResourceBundleClassName="" TitleResourceBundleKey="" DescriptionId="">
     <Icons>
-      <Icon CanonicalFileName="res/img/icon.png" IsFocus="true"/>
-      <Icon CanonicalFileName="res/img/icon1.png" IsFocus="false"/>
+      <Icon CanonicalFileName="res/img/icon.png" IsFocus="false"/>
+      <Icon CanonicalFileName="res/img/icon1.png" IsFocus="true"/>
     </Icons>
   </Resources>
   <KeywordResources KeywordResourceBundleName="" KeywordResourceBundleRelativePath="" KeywordResourceBundleClassName="" KeywordResourceBundleKey=""/>

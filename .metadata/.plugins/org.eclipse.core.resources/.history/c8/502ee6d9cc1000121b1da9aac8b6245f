@@ -1,0 +1,80 @@
+package mypackage;
+public class Config {
+	private String version = "0.1.0.3.sqlite";
+	private String path;
+	private String Createmateria;
+	private String Createapunte;
+	private String Insertmateria;
+	private String Insertapunte;
+	private String Selectnommateria;
+	private String Selectmateria;
+	private String Selecttitulo;
+	private String Selectapunte;
+	private String Updateapunte;
+	private String Deleteapunte;
+	private String Deletetodo;
+	private String Deletetableapunte;
+	private String Deletetablemateria;
+	//Direccion + la version de la base de datos
+	public String Path(){
+		path = "file:///SDCard/Databases/NOTAS/NotasDB_"+version;
+		return path;
+	}
+	//CREATE
+	public String CreateMateria(){
+		Createmateria = "CREATE TABLE IF NOT EXISTS MATERIA(id_materia INTEGER PRIMARY KEY, nombre_materia TEXT, codigo_materia TEXT, grupo_materia TEXT )";
+		return Createmateria;
+	}
+	public String CreateApunte(){
+		Createapunte = "CREATE TABLE IF NOT EXISTS APUNTE(id_materia INTEGER, id_apunte INTEGER PRIMARY KEY, titulo TEXT, apunte TEXT, prioridad TEXT, fecha DATETIME)";
+		return Createapunte;
+	}
+	//INSERT
+	public String InsertMateria(){
+		Insertmateria = "INSERT INTO MATERIA(nombre_materia,codigo_materia,grupo_materia)values";
+		return Insertmateria;
+	}
+		public String InsertApunte(){
+		Insertapunte = "INSERT INTO APUNTE(id_materia,titulo,apunte,prioridad,fecha)values";
+		return Insertapunte;
+	}
+	//SELECT
+	public String SelectMateria(){
+		Selectmateria = "SELECT nombre_materia,codigo_materia,grupo_materia FROM MATERIA";
+		return Selectmateria;
+	}
+	public String SelectNomMateria(){
+		Selectnommateria = "SELECT nombre_materia FROM MATERIA WHERE id_materia=";
+		return Selectnommateria;
+	}
+	public String SelectTitulo(){
+		Selecttitulo = "SELECT titulo,id_apunte,prioridad,fecha FROM APUNTE WHERE id_materia=";
+		return Selecttitulo;
+	}
+	public String SelectApunte(){
+		Selectapunte = "SELECT titulo,apunte,prioridad,fecha FROM APUNTE WHERE id_materia=";
+		return Selectapunte;
+	}
+	//UPDATE
+	public String UpdateApunte(){
+		Updateapunte = "UPDATE APUNTE SET titulo = ?, apunte = ?, prioridad = ?, fecha = ?  WHERE id_materia = ? AND id_apunte = ?";
+		return Updateapunte;
+	}
+	//DELETE
+	public String DeleteApunte(){
+		Deleteapunte = "DELETE FROM APUNTE WHERE id_apunte = ";
+		return Deleteapunte;
+	}
+	public String DeleteTodo(){
+		Deletetodo = "DELETE FROM APUNTE WHERE id_materia = ";
+		return Deletetodo;
+	}
+	public String DeleteTableMateria(){
+		Deletetablemateria = "DELETE FROM MATERIA";
+		return Deletetablemateria;
+	}
+	public String DeleteTableApunte(){
+		Deletetableapunte = "DELETE FROM APUNTE";
+		return Deletetableapunte;
+	}
+}
